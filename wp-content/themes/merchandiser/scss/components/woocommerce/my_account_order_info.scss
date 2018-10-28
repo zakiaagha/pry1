@@ -1,0 +1,206 @@
+.woocommerce-view-order, .woocommerce-order-pay
+{
+	.woocommerce
+	{
+		.order-info
+		{
+			padding-bottom: rem-calc(30);
+			margin-bottom: rem-calc(50);
+			font-size: rem-calc(14);
+
+			@media #{$large-up}
+			{
+				margin-top: rem-calc(60);
+				font-size: rem-calc(18);
+				margin-bottom: rem-calc(90);
+			}
+
+			mark 
+			{
+				background: transparent;
+				font-weight: bold;
+				color: inherit;
+			}
+		}
+
+		.woocommerce-customer-details 
+		{
+			
+			h2.woocommerce-column__title
+			{
+			    margin-bottom: 20px;
+			}
+
+			.woocommerce-column__title
+			{
+				font-size: rem-calc(30);
+			}
+
+			address
+			{
+				font-style: normal;
+			}
+		}
+
+		.woocommerce-customer-details--phone,
+		.woocommerce-customer-details--email
+		{
+			margin-bottom: 0px;
+
+			@media #{$small-only} 
+			{
+				font-size: 18px;
+			}
+		}
+
+		h2 
+		{
+			text-transform: none;
+			font-size: rem-calc(30);
+			margin-top: rem-calc(50);
+
+			@media #{$large-up}
+			{
+				font-size: $h1-font-size;
+			}
+		}
+
+		table.shop_table 
+		{
+			border-top: none;
+
+			thead 
+			{
+				display: table-header-group;
+
+				tr 
+				{
+					border-bottom: 2px solid #f0f0f0;
+					display: table-row;
+					margin: 0;
+					padding: 0;
+
+					th
+					{
+						width: 60%;
+					}
+				}
+			}
+
+			tbody 
+			{
+				tr 
+				{
+					display: table-row;
+					margin: 0;
+					padding: 0;
+
+					td 
+					{
+						padding-right: rem-calc(20);
+						font-size: rem-calc(16);
+					}
+
+					&:last-child 
+					{
+						&:not(.order_item)
+						{
+							border: none; 
+
+							.amount 
+							{
+								font-size: rem-calc(16);
+								font-weight: bold;
+
+								@media #{$large-up}
+								{
+									font-size: rem-calc(30);
+								}
+							}
+						}
+					}
+						
+				}
+			}
+
+			tfoot 
+			{
+				tr 
+				{
+					display: table-row;
+					margin: 0;
+					padding: 0;
+
+					td 
+					{
+						font-size: 16px;
+					}
+
+					&:last-child 
+					{
+						&:not(.order_item)
+						{
+							border: none; 
+							td 
+							{
+								padding: rem-calc(25) 0;
+							}
+
+							.amount 
+							{
+								font-size: rem-calc(16);
+								font-weight: bold;
+
+								@media #{$large-up}
+								{
+									font-size: rem-calc(30);
+								}
+							}
+						}
+					}
+						
+				}
+			}
+
+			&.customer_details 
+			{
+				width: 100%;
+
+				th 
+				{
+					width: 100%;
+					float: left;
+
+
+					@media #{$large-up}
+					{
+						width: 30%;
+						float: none;
+					}
+
+				}
+
+				td 
+				{
+					width: 100%;
+					float: left;
+					margin-top: rem-calc(20);
+
+					@media #{$large-up}
+					{
+						width: auto;
+						float: none;
+						margin-top: none;
+					}
+				}
+			}
+		}
+
+		address 
+		{
+			font-style: normal;
+			padding-bottom: 20px;
+			color: #000;
+		}
+	}
+}

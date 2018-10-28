@@ -1,0 +1,40 @@
+.woocommerce 
+{
+
+	.woocommerce-shipping-fields 
+    {
+        
+        margin-top: rem-calc(40);
+
+        h3 
+        {
+            &#ship-to-different-address
+            {
+                label 
+                {
+                    display: inline-block;
+                    line-height: 100%;
+                } 
+
+                span
+                {
+                    line-height: 30px;
+                }
+
+                input[type="checkbox"]
+                {
+
+                    margin: -10px 0 0;
+                    padding: 0;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        textarea#order_comments
+        {
+            height: 100px;
+        }        
+	}
+
+}

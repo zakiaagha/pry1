@@ -1,0 +1,17 @@
+.woocommerce {
+
+	.product_title {
+        
+		font-size: rem-calc(24);
+		text-align: center;
+
+        @media #{$large-up} 
+        {
+	        font-size: rem-calc(60);
+	        line-height: 1em;
+	        margin: 0 0 rem-calc(30) 0;
+	        text-align: left;
+    	}
+	}
+
+}

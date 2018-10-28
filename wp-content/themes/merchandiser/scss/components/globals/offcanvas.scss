@@ -1,0 +1,370 @@
+.offcanvas_container {
+	position: relative;
+	overflow: hidden;
+	background: #fff;
+}
+
+.offcanvas_main_content {	
+	position: relative;
+	z-index: 2;
+	transition: transform $offcanvas_speed $offcanvas_easing;
+	transition-delay: .3s;
+	background: $body-bg;
+	//display: none;
+}
+
+.offcanvas_overlay {
+	
+	position: fixed;
+	z-index: -9999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 150%;
+	background: rgba(0,0,0,0.5);
+	animation: offcanvas_overlay_closing_animation 1s forwards;
+	transition: transform $offcanvas_speed $offcanvas_easing;
+	transition-delay: .3s;
+
+	body.no-offcanvas-animation & {
+		top: 100%;
+		left: 100%;
+		width: 0;
+		height: 0;
+	}
+
+    .close-canvas {
+		position: absolute;
+		z-index: 11000;
+		top: 0;
+		font-size: rem-calc(20);
+		color: #808080;
+		background: #000;
+		text-align: center;
+		line-height: $header-mobiles-height;
+		width: $header-mobiles-height;
+		height: $header-mobiles-height;
+		display: block;
+		cursor: pointer;
+		@media #{$large-up} { display: none; }
+	}
+
+}
+
+.offcanvas_aside {	
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	width: $offcanvas_mobile_width;
+	height: 100%;
+	overflow: hidden;
+	.ie9 & { -ms-transform: scale(1, 1) }
+
+	body.no-offcanvas-animation & {
+		visibility: hidden;
+	}
+
+	@media #{$large-up} {
+		width: $offcanvas_largeup_width;
+        .offcanvas_for_quickview & {
+        	width: $offcanvas_quickview_largeup_width;
+        }
+	}
+
+	&.offcanvas_aside_left {
+		left: -100%;
+		background: #fff;
+		animation: offcanvas_left_closing_animation 1s forwards;
+	}
+
+	&.offcanvas_aside_right {
+		right: -100%;
+		// background: #f9f9f9;
+		animation: offcanvas_right_closing_animation 1s forwards;
+	}
+
+	.offcanvas_aside_content {
+		height: 100%;
+		overflow: auto;
+	}
+
+}
+
+body.offcanvas_open {
+
+	.offcanvas_overlay {		
+		
+		animation: offcanvas_overlay_open_animation 1s forwards;
+		.ie9 & { opacity: 1; z-index: 9999; }
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			//box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
+			animation: global_fadein .5s forwards;
+			//animation-delay: 0.5s;
+			.ie9 & { opacity: 1 }
+		}
+
+	}
+
+	/*.offcanvas_main_content {	
+		overflow: hidden;
+		height: 100vh;
+	}*/
+
+}
+
+// Offcanvas - Left
+
+body.offcanvas_left {
+	
+	.offcanvas_main_content, .offcanvas_overlay {
+		transform: translate3d($offcanvas_mobile_width, $offcanvas_top_offset, 0);
+		.ie9 & { margin-left: $offcanvas_mobile_width; }
+	}
+
+	.offcanvas_overlay {
+		.close-canvas {
+			left: 0px;
+		}
+		.ie9 & { left: $offcanvas_mobile_width; right: auto; }
+	}
+
+	.offcanvas_aside_left {
+		animation: offcanvas_left_open_animation 1s forwards;
+		.ie9 & { opacity: 1; left: 0; }
+	}
+
+	@media #{$large-up} {		
+		
+		.offcanvas_main_content, .offcanvas_overlay {
+			transform: translate3d($offcanvas_largeup_width, $offcanvas_top_offset, 0);
+			.ie9 & { margin-left: $offcanvas_largeup_width; }
+		}
+
+		.offcanvas_overlay {
+			.ie9 & { left: $offcanvas_largeup_width; }
+		}
+
+		&.offcanvas_for_quickview {
+			.offcanvas_main_content, .offcanvas_overlay {
+				transform: translate3d($offcanvas_quickview_largeup_width, $offcanvas_top_offset, 0);
+				.ie9 & { margin-left: $offcanvas_quickview_largeup_width; }
+			}
+			.offcanvas_overlay {
+				.ie9 & { left: $offcanvas_quickview_largeup_width; }
+			}
+		}
+	}
+}
+
+// Offcanvas - Right
+
+body.offcanvas_right {
+	
+	.offcanvas_main_content, .offcanvas_overlay {
+		transform: translate3d(-$offcanvas_mobile_width, $offcanvas_top_offset, 0);
+		.ie9 & { margin-right: $offcanvas_mobile_width; }
+	}
+
+	.offcanvas_overlay {
+		.close-canvas {
+			right: 0px;
+		}
+		.ie9 & { right: $offcanvas_mobile_width; left: auto; }
+	}
+
+	.offcanvas_aside_right {
+		animation: offcanvas_right_open_animation 1s forwards;
+		.ie9 & { opacity: 1; right: 0; }
+	}
+
+	@media #{$large-up} {		
+		
+		.offcanvas_main_content, .offcanvas_overlay {
+			transform: translate3d(-$offcanvas_largeup_width, $offcanvas_top_offset, 0);
+			.ie9 & { margin-right: $offcanvas_largeup_width; }
+		}
+
+		.offcanvas_overlay {
+			.ie9 & { right: $offcanvas_largeup_width; }
+		}
+		
+		&.offcanvas_for_quickview {
+			.offcanvas_main_content, .offcanvas_overlay {
+				transform: translate3d(-$offcanvas_quickview_largeup_width, $offcanvas_top_offset, 0);
+				.ie9 & { margin-right: $offcanvas_quickview_largeup_width; }
+			}
+			.offcanvas_overlay {
+				.ie9 & { right: $offcanvas_quickview_largeup_width; }
+			}
+		}
+	}
+}
+
+// Offcanvas Left Animation
+
+@keyframes offcanvas_left_open_animation {
+    
+    0%
+    {
+    	left: 0;
+    	//opacity: .3;
+    	transform: scale(1, 1);
+    }
+
+    70%
+    {
+    	left: 0;
+    	transform: scale(1, 1);
+		//opacity: .3;
+    }
+
+    100%
+    {
+    	left: 0;
+    	transform: scale(1, 1);
+		//opacity: 1;
+    }
+
+}
+
+@keyframes offcanvas_left_closing_animation {
+    
+    0%
+    {
+    	left: 0;
+    	transform: scale(1, 1);
+		//opacity: 1;
+    }
+
+    30%
+    {
+    	left: 0;
+    	transform: scale(1, 1);
+		//opacity: .3;
+    }
+
+    99%
+    {
+    	left: 0;
+    	transform: scale(1, 1);
+		//opacity: .3;
+    }
+
+    100%
+    {
+    	left: -100%;
+    }
+
+}
+
+// Offcanvas Right Animation
+
+@keyframes offcanvas_right_open_animation {
+    
+    0%
+    {
+    	right: 0;
+    	//opacity: .3;
+    	transform: scale(1, 1);
+    }
+
+    70%
+    {
+    	right: 0;
+    	transform: scale(1, 1);
+		//opacity: .3;
+    }
+
+    100%
+    {
+    	right: 0;
+    	transform: scale(1, 1);
+		//opacity: 1;
+    }
+
+}
+
+@keyframes offcanvas_right_closing_animation {
+    
+    0%
+    {
+    	right: 0;
+    	transform: scale(1, 1);
+		//opacity: 1;
+    }
+
+    30%
+    {
+    	right: 0;
+    	transform: scale(1, 1);
+		//opacity: .3;
+    }
+
+    99%
+    {
+    	right: 0;
+    	transform: scale(1, 1);
+		//opacity: .3;
+    }
+
+    100%
+    {
+    	right: -100%;
+    }
+
+}
+
+// Overlay Animation
+
+@keyframes offcanvas_overlay_open_animation {
+    
+    0%
+    {
+    	opacity: 0;
+    	z-index: 9999;
+    }
+
+    70%
+    {
+		opacity: 0;
+		z-index: 9999;
+    }
+
+    100%
+    {
+		opacity: 1;
+		z-index: 9999;
+    }
+
+}
+
+@keyframes offcanvas_overlay_closing_animation {
+    
+    0%
+    {
+		opacity: 1;
+		z-index: 9999;
+    }
+
+    70%
+    {
+		opacity: 1;
+		z-index: 9999;
+    }
+
+    100%
+    {
+    	opacity: 0;
+    	z-index: -9999;
+    }
+
+}

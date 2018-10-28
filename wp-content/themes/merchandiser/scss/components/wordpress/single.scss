@@ -1,0 +1,76 @@
+.single {
+
+    @import "single/single_header";
+    @import "single/single_title";
+    @import "single/single_meta";
+    @import "single/single_content";
+    @import "single/single_footer";
+    @import "single/single_post_navigation";
+    @import "single/single_cover_image";
+    @import "single/single_category";
+
+    .main-with-sidebar
+    {
+    	#secondary
+    	{
+    		margin-top: 90px;
+            min-height: 50vh;
+            margin-bottom: 80px;
+    	}
+
+    	.post-categories
+    	{
+            @media #{$medium-up}  
+            {
+    		    text-align: left;
+
+                li 
+                {
+                    padding-right: 15px;
+                    padding-left: 0;
+                }
+            }
+    	}
+
+    	.entry-title
+    	{
+    		@media #{$medium-up}  
+            {
+                text-align: left;
+            }
+    	}
+
+    	.entry-meta 
+    	{
+            @media #{$medium-up}  
+            {
+                text-align: left;
+                margin-bottom: 60px;        
+     	    }
+
+            span 
+            {
+                margin: 0 10px 0 0;
+
+                @media #{$medium-up}  
+                {
+                    margin: 0 15px 0 0;
+                }
+            }
+        }
+
+    	.tags-links 
+    	{
+            @media #{$medium-up}  
+            {
+    		    text-align: left;
+
+                a
+                {
+                    margin: 0 14px 0 0;
+                }
+            }
+    	}
+    }
+    
+}

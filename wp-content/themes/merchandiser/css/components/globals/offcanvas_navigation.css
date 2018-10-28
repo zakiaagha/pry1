@@ -1,0 +1,36 @@
+.offcanvas_aside .mm-menu .mm-listview li {
+  border-color: transparent;
+}
+
+.offcanvas_aside .mm-menu .mm-listview li.has-border {
+  border-top: solid 1px;
+  border-top-color: inherit;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.offcanvas_aside .mm-menu .mm-listview li:first-child {
+  margin-top: 20px;
+}
+
+.offcanvas_aside .mm-navbar {
+  padding: 0 20px;
+}
+
+.offcanvas_aside .mm-navbar .mm-title {
+  text-align: left;
+}
+
+.offcanvas_aside .mm-navbar .mm-prev ~ .mm-title {
+  margin-left: 20px;
+}
+
+.offcanvas_aside .offcanvas_close {
+  position: absolute;
+  z-index: 1;
+  right: 11px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}

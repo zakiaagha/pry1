@@ -1,0 +1,8 @@
+.entry-header {
+	padding: 0 15px;
+
+	@media #{$medium-up}  
+	{
+		padding: 0;
+	}
+}

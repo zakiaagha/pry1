@@ -1,0 +1,15 @@
+.woocommerce {
+        
+    .product-badges {
+        
+        position: absolute;
+        top: 0;
+        right: rem-calc(40);
+        z-index: 1;
+
+        @import "product_sale_badge";
+        @import "product_out_of_stock_badge";
+
+    }
+
+}

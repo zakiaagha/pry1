@@ -1,0 +1,161 @@
+.woocommerce-error {
+
+	background-color: $alert-color;
+	color: #fff;
+	list-style: none;
+	
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	margin: 0;
+
+	overflow: hidden;
+	z-index: 9999;
+
+	transition: opacity 1s ease;
+	transform: translate3d(0,200%,0);
+	animation-name: animFadeMove;
+	animation-fill-mode: both;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-out;
+	animation-delay: 1.5s;
+
+	font-size: rem-calc(13);
+	line-height: rem-calc(17);
+	font-weight: bold;
+	padding: 20px;
+	cursor: pointer;
+
+	&.inactive
+	{
+		opacity: 0;
+	}
+
+	a 
+	{
+		color: #FFF;
+	}
+
+	a:not(.close) {
+		background: transparent;
+		border-bottom:  solid 1px #FFF;
+		padding: 0;
+		margin: 0;
+		font-size: rem-calc(13);
+		font-weight: bold;
+		text-transform: none;
+		color: #FFF;
+
+		// position: absolute;
+		// top: 30px;
+		// left: 0;
+		// transform: translateX(50%);
+
+		@media #{$large-up}
+		{
+			position: relative;
+			left: auto;
+			margin-left: 15px;
+			bottom: auto;
+			font-size: 14px;
+			top: auto;
+			transform: none;
+
+			&:hover, &:focus, &:active
+			{
+				background: transparent;
+			}
+		}
+	}
+
+	&:before {
+		display: block;
+		content: "\f06a";
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		font-family: 'FontAwesome';
+		font-size: rem-calc(24);
+
+		@media #{$large-up}
+		{
+			left: 40px;
+			top: 26px;
+		}
+	}
+
+	li 
+	{
+		transition: opacity .5s;
+		// opacity: 0;
+		// animation-name: animFadeMoveInner;
+		// animation-fill-mode: both;
+		// animation-duration: 0.4s;
+		// animation-timing-function: ease;
+		// animation-delay: 1.6s;
+		padding: 0 30px;
+
+		@media #{$large-up}
+		{
+			padding: 0;
+		}
+	}
+
+	li.close
+	{
+		position: absolute;
+		right: 20px;
+		top: 18px;
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		content: "\f00d";
+		font-size:	rem-calc(14);
+		color: #FFF;
+		padding: 0;
+
+		@media #{$large-up}
+		{
+			right: 20px;
+			top: 28px;
+		}
+	}
+
+
+	@media #{$large-up}
+	{
+		font-size: rem-calc(14);
+		line-height: rem-calc(26);
+		padding: 25px 40px 25px 80px;
+	}
+
+
+}
+
+@keyframes animFadeMove {
+	0% {   transform: translate3d(0,100%,0); }
+	100% {   transform: translate3d(0,0,0); }
+}
+
+form.woocommerce-checkout
+{
+	.woocommerce-error
+	{
+		&:after 
+		{
+			font-family: FontAwesome;
+			font-size: 13px;
+			color: #FFF;
+			content: "\f00d";
+			position: absolute;
+			top: 20px;
+			right: 20px;
+
+			@media #{$large-up}
+			{
+				right: 30px;
+			}
+		}
+	}
+}

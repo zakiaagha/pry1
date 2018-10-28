@@ -1,0 +1,11 @@
+.entry-meta 
+{
+	font-size: rem-calc(12);
+	text-align: center;
+
+	@media #{$medium-up}  
+	{
+		font-size: rem-calc(14);
+	}
+
+}

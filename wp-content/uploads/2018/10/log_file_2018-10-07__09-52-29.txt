@@ -1,0 +1,34 @@
+
+---Downloaded files---
+The import files for: Default were successfully downloaded!
+Initial max execution time = 120
+Files info:
+Site URL = http://localhost:8080/wp-test/wordpress
+Data file = C:\xampp\htdocs\wp-test\wordpress/wp-content/themes/merchandiser/inc/demo/merchandiser.default.xml
+Widget file = not defined!
+Customizer file = not defined!
+Redux files:
+not defined!
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+---pt-ocdi/after_import---
+

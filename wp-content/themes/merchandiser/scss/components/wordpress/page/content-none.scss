@@ -1,0 +1,148 @@
+body.search-no-results
+{
+	.page-content
+	{
+		min-height: calc(100vh - 200px);
+		padding: 80px 0 0; 
+		
+		.search-no-results
+		{
+			width: 100%;
+			max-width: 868px;
+			margin: 0px auto;
+			padding: 0 30px; 
+			
+			@media #{$large-up}  
+			{	
+				padding: 0;
+				margin: 0 auto;
+				height: 428px;
+			}
+
+			.sorry-no-results
+			{
+				@media #{$large-up}  
+				{
+					height: 100%;
+					display: table;
+					position: relative;
+				}
+
+				&:before 
+				{
+					content: "\f002";
+					font-family: FontAwesome;
+					font-size: 100px;
+					font-weight: bold;
+					line-height: 100px;
+					margin-bottom: 30px;
+					width: 100%;
+					text-align: center;
+					display: block;
+
+					@media #{$large-up}  
+					{
+						content: "";
+						text-align: center;
+						width: 100%;
+						height: 428px;  
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+						text-align: center;
+						z-index: 1;
+						background: url(../images/big-search.png) center center no-repeat;
+					}
+				}
+				
+				p 
+				{
+					font-size: rem-calc(24);
+					line-height: rem-calc(30);
+					font-weight: bold;
+					text-align: center;
+
+					@media #{$large-up}  
+					{
+						font-size: rem-calc(48);
+						position: relative;
+						line-height: 1.25;
+						display: table-cell;
+						
+						vertical-align: middle;
+						z-index: 2;
+					}
+				}
+			}
+
+			form
+			{
+				position: relative;
+		        margin-top: rem-calc(30);
+		        z-index: 2;
+
+		        @media #{$large-up}  
+				{
+					margin-top: rem-calc(100);
+				}
+
+		        input 
+		        {
+		            &:not([type="submit"])
+		            {
+		                border-top: none;
+		                border-left: none;
+		                border-right: none;
+		                border-width: 2px;
+						font-size: rem-calc(18);
+						border-bottom: none;
+						padding-right: 40px;
+		            }
+
+		            &[type="submit"]
+					{
+						position: absolute;
+						top: 0;
+					    right: 0;
+					    width: 40px;
+					    height: 40px;
+						background: none;
+						opacity: 0;
+						z-index: 999;
+						padding: 0;
+						margin: 0;
+					}
+		        }
+
+		  
+		        label 
+		        {
+		            font-weight: bold;
+		            transition: all 0.3s;
+
+		            .screen-reader-text
+		            {
+		            	display: none;
+		            }
+		        }
+
+		        &:after 
+				{
+					position:absolute;
+			        font-family: FontAwesome;
+			        font-size: rem-calc(16);
+			        top: rem-calc(0);
+			        right: 16px;
+			        height: 40px;
+			        width: 20px;
+			        content: "\f002";
+			        text-align: right;
+			        line-height: rem-calc(40);
+				}
+
+			}
+		}
+	}
+
+}

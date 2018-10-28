@@ -1,0 +1,249 @@
+.site-header-mobiles {
+
+	background-color: $gainsboro;	
+	width: 100%;
+	position: absolute;	
+	z-index: 1000;
+	top: 0;	
+	font-size: 14px;
+	transition: all $offcanvas_speed $offcanvas_easing;
+	transition-delay: .3s;
+	body.header-transparent:not(.header-sticky-scroll) & { background-color: transparent; }
+	body.header-sticky & { position: fixed; }
+	body.admin-bar.header-sticky & { top: $wpadminbar_mobile_height; }
+	body.offcanvas_left & {	
+		transform: translate3d($offcanvas_mobile_width, $offcanvas_top_offset, 0); 
+		.ie9 & { left: $offcanvas_mobile_width; right: auto; }
+	}
+	body.offcanvas_right & { 
+		transform: translate3d(-$offcanvas_mobile_width, $offcanvas_top_offset, 0); 
+		.ie9 & { right: $offcanvas_mobile_width; left: auto; }
+	}
+	
+	@media #{$large-up} { display: none; }
+
+	.header-wrapper-mobiles {
+
+		width: 100%;
+		margin: 0 auto;
+		position: relative;
+		display: table;
+		height: auto;
+		min-height: $header-mobiles-height;
+		//transition: all 0.3s ease;
+		//transition-delay: 0.3s;
+
+		.nav {
+			
+			display: table-cell;
+			text-align: left;
+			vertical-align: middle;
+			width: 25%;
+
+			opacity: 0;
+			animation: global_fadein 1.5s forwards;
+			animation-delay: .5s;
+			.ie9 & { opacity: 1; }
+
+			ul {
+				
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				white-space: nowrap;
+
+				li {
+					padding: 0 0 0 20px;
+					vertical-align: middle;
+					font-weight: bold;
+					opacity: .5;
+					cursor: pointer;
+
+					/*&:hover {
+						opacity: 1;
+					}*/
+
+					div {
+
+						display: inline-block;
+
+						.tools_button_icon {
+							display: inline-block;
+							vertical-align: middle;
+							font-size: 18px;
+							line-height: $header-mobiles-height;
+						}
+
+						.tools_button_text {							
+							display: inline-block;
+							vertical-align: middle;
+							font-size: 12px;
+							line-height: $header-mobiles-height;
+							text-transform: uppercase;													
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+		.site-branding {
+			
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			width: 50%;
+			padding: 0;
+
+			.site-logo {				
+
+				img {
+					transition: all 0.3s ease;
+					max-width: 165px;
+					max-height: $header-mobiles-height;
+					padding: 10px 0;
+				}
+				
+			}
+
+			.site-title {
+				
+				white-space: nowrap;
+				font-weight: bold;
+				text-transform: uppercase;
+
+				a {
+					display: inline-block;				
+					text-transform: lowercase;
+					font-weight: bold;
+					font-size: 24px;
+					line-height: $header-mobiles-height;
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+
+		.tools {
+			
+			display: table-cell;
+			vertical-align: middle;
+			padding-right: 15px;
+			width: 25%;
+			opacity: 0;
+			animation: global_fadein 1.5s forwards;
+			animation-delay: .5s;
+			.ie9 & { opacity: 1; }
+
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: table;
+				text-align: right;
+				float: right;
+				font-size: 1em;
+
+				li {
+					//padding: 0 0 0 10px;
+					//margin: 0;
+					display: table-cell;
+					line-height: 1em;
+					vertical-align: middle;
+
+					&:first-child {
+						padding: 0;
+					}
+
+					.tools_button {
+					
+						display: table;
+						white-space: nowrap;
+						color: $site-header-color;
+						position: relative;
+						padding-left: 10px;
+
+						&:hover {
+							color: $site-header-color-hover;
+						}
+
+						.tools_button_icon {
+							
+							display: table-cell;
+							width: 28px;
+							height: 28px;
+							padding: 5px;
+							vertical-align: middle;
+
+							&.uploaded_icon {
+
+								text-align: center;
+								vertical-align: middle;
+								opacity: .5;
+								transition: opacity 0.3s ease;
+
+								/*&:hover {
+									opacity: 1;
+								}*/
+
+								img {
+									max-width: 18px;
+									max-height: 18px;
+									display: inline-block;
+								}
+
+								svg 
+								{
+									display: inherit;
+									width: 18px;
+									height: 18px;
+									fill: $site-header-color;
+								}
+
+							}
+							
+						}
+
+						.shopping_bag_items_number,
+						.wishlist_items_number
+						{
+							position: absolute;
+							top: -3px;
+							right: -3px;
+							width: 14px;
+							height: 14px;
+							line-height: 1.8em;
+							background-color: $site-header-color;
+							color: #000;
+							text-align: center;
+							border-radius: 100px;
+							font-size: 9px;
+
+							&.visible {
+								visibility: visible;
+							}
+						}
+					}
+				}
+
+				li.shopping-bag-button {
+					.tools_button {
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}
+
+// fix position when wpadminbar is active
+@media only screen and (min-width: $wpadminbar_breakpoint) {
+	body.admin-bar.header-sticky {	
+		.site-header-mobiles {		
+			top: $wpadminbar_large_height;
+		}
+	}
+}

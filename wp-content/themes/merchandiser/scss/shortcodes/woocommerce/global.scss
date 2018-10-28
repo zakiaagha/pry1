@@ -1,0 +1,26 @@
+.hide_product_details 
+{
+	.shop_product_metas
+	{
+		display: none;
+	}
+}
+
+ul
+{
+	&.products-grid
+	{
+		img 
+		{
+			width: 100%;
+		}
+	}
+
+	&.shortcode_products 
+	{
+		img 
+		{
+			width: 100%;
+		}
+	}
+}

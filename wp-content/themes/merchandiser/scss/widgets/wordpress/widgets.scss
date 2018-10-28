@@ -1,0 +1,194 @@
+@import "../mixins";
+
+.widget-area {
+
+    .widget {
+        
+        @include widget();
+        
+        //==============================================================================
+        // widget_media_gallery
+        //==============================================================================
+        
+        &.widget_media_gallery
+        {
+
+            .gallery-item figcaption
+            {
+                display: none;
+            }
+
+            &:after
+            {
+                content: "";
+                display: block;
+                clear: both; 
+            }
+        }
+
+        //==============================================================================
+        // widget_categories
+        //==============================================================================
+
+        &.widget_categories
+        {
+            @include widget_ul_li_a("\f1db", "\f111", "\f058", "\f057");
+            @include widget_dropdown();
+        }
+
+        //==============================================================================
+        // widget_recent_entries
+        //==============================================================================
+
+        &.widget_recent_entries
+        {
+            @include widget_lists("\f0f6", "\f15c", 0, -0.05em);
+            .post-date {
+                display: block;
+                color: $secondary-color-light;
+            }
+        }
+
+        //==============================================================================
+        // widget_recent_comments
+        //==============================================================================
+
+        &.widget_recent_comments
+        {
+            @include widget_lists("\f27b", "\f27a", 0, -0.2em);
+        }
+
+        //==============================================================================
+        // widget_tag_cloud
+        //==============================================================================
+
+        &.widget_tag_cloud
+        {
+            @include widget_tags();
+        }
+
+        //==============================================================================
+        // widget_search
+        //==============================================================================
+
+        &.widget_search
+        {
+            @include widget_search();
+        }
+
+        //==============================================================================
+        // widget_archive
+        //==============================================================================
+
+        &.widget_archive
+        {
+            @include widget_ul_li_a("\f1db", "\f111", "\f058", "\f057");
+            @include widget_dropdown();
+        }
+
+        //==============================================================================
+        // widget_text
+        //==============================================================================
+
+        &.widget_text 
+        {
+            .textwidget
+            {
+                ul,ol
+                {
+                    list-style-type: inherit;
+                    line-height: 1.6;
+                    list-style-position: outside;
+                    margin-left: 1.4rem; 
+                    margin-bottom: 1.11111rem; 
+                    
+                    li
+                    {
+                        text-transform: inherit; 
+                        font-size: 1rem;
+                        margin-bottom: 0;
+                    } 
+                }
+
+                ul
+                {
+                    list-style-type: disc; 
+                }
+
+                ol
+                {
+                    list-style-type: decimal; 
+                }
+            }
+        }
+
+        //==============================================================================
+        // widget_calendar
+        //==============================================================================
+
+        &.widget_calendar
+        {
+            table
+            {
+                caption 
+                {
+                    font-size: rem-calc(14);
+                    text-transform: uppercase;
+                    text-align: left;
+                    font-weight: bold;
+                }
+
+                th
+                {
+                    font-size: rem-calc(14);
+                }
+
+                tr 
+                {
+                    border: none;
+                }
+
+                td 
+                {
+                    padding: rem-calc(8) 0;
+                }
+            }
+        }
+
+        //==============================================================================
+        // widget_rss
+        //==============================================================================
+
+        &.widget_rss
+        {
+            @include widget_lists("\f09e", "\f09e", 0, -0.2em);
+
+            .rss-date {
+                display: block;
+                padding: rem-calc(10) 0 rem-calc(10) 0;
+            }
+
+            cite {
+                text-transform: uppercase;
+                font-style: normal;
+                font-weight: bold;
+                display: inline-block;
+                padding: rem-calc(10) 0 rem-calc(10) rem-calc(20);
+                position: relative;
+
+                &:before {
+                    content: "—";
+                    position: absolute;
+                    left: 0;
+                    top: 0.7em;
+                }
+            }
+
+            .rssSummary {
+                font-size: rem-calc(14);
+            }
+        }    
+
+    }
+
+}

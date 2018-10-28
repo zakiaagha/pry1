@@ -1,0 +1,30 @@
+.woocommerce {
+
+	.cart {
+        
+        .quantity {
+            
+            width: rem-calc(60);
+            
+            input.qty {
+                
+                border: 0;
+                font-size: rem-calc(18);
+                font-weight: bold;
+                text-align: center;
+                height: rem-calc(60);
+                margin: 0;
+                background: transparent;
+                padding: 0 0 0 15px;
+
+            }
+
+            .screen-reader-text {
+                display: none;
+            }
+            
+        }
+
+	}
+
+}

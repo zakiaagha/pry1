@@ -1,0 +1,12 @@
+.woocommerce 
+{
+	// :not(body)
+	// {
+	// 	padding: 0 15px;
+	// }
+	
+	@media #{$large-up}  
+	{
+		padding: 0;
+	}
+}

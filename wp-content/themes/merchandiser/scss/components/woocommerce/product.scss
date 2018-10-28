@@ -1,0 +1,175 @@
+.woocommerce
+{
+    .product_content_wrapper
+    {
+        .row_split
+        {               
+            overflow: hidden;
+
+            &.zoomed
+            {
+                @media #{$large-up} 
+                {
+                    .product-images-wrapper
+                    {
+                        cursor: url(../images/original-zoom-out.svg), e-resize;
+
+                        .swiper-button-prev,
+                        .swiper-button-next
+                        {
+                            display: block;
+                            position: fixed;
+                            top: 50%;
+                            transition: all .3s;
+
+                            &:hover
+                            {
+                                cursor: pointer;
+                            }
+
+                            &.swiper-button-disabled
+                            {
+                                display: none;
+                            }
+                        }
+
+                        .swiper-button-prev
+                        {
+                            background: url(../images/original-left.svg) center center no-repeat;
+                            height: 75px;
+                            width: 75px;
+                            opacity: 0.5;
+                            left: 0;
+                            margin: 0;
+                        }
+
+                        .swiper-button-next
+                        {
+                            background: url(../images/original-right.svg) center center no-repeat;
+                            height: 75px;
+                            width: 75px;
+                            opacity: 0.5;
+                            right: 0;
+                            margin: 0;
+                        }
+
+                        &:hover
+                        {
+                            @media #{$large-up}
+                            {
+                                .swiper-button-prev, .swiper-button-next 
+                                {
+                                    background-color: rgba(255, 255, 255, 0.6);
+                                    opacity: 0.5;
+
+                                    &:hover 
+                                    {
+                                        opacity: 1;
+                                        background-color: rgba(255, 255, 255, 0.5);
+                                    }
+
+                                    &.swiper-button-disabled
+                                    {
+                                        &:hover 
+                                        {
+                                            background-color: rgba(255, 255, 255, 0.6);
+                                            opacity: 0.5;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .product-thumbnails-horizontal-wrapper,
+                    .product_infos
+                    {
+                        //display: none;
+                    }
+
+                    .product_infos
+                    {
+                        opacity: 0;
+                    }
+                }
+            }
+
+            .row_split_inside
+            {
+                position: relative;
+                width: 100%;
+
+                @media #{$large-up} 
+                {
+                    width: 200%;
+                }             
+
+                &:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+
+                .first_col_split
+                {
+                    width: 100%;
+
+                    @media #{$large-up} 
+                    {
+                        float: left;
+                        width: 25%;
+                        transition: width .5s ease;
+
+                        &.zoomed
+                        {
+                            width: 50%;
+                        }
+                    }
+                }
+
+                .second_col_split
+                {
+                    width: 100%;
+
+                    @media #{$large-up} 
+                    {
+                        float: left;
+                        width: 25%;
+                    }
+                }
+            }
+        }
+
+        .product_infos
+        {
+            padding: rem-calc(60) rem-calc(30) 20px rem-calc(30);
+
+            @media #{$large-up} 
+            {
+                padding: 5% 0 5% 15%;
+            }
+        }
+
+        &.layout_classic
+        {
+            .row_split
+            {
+                @media #{$large-up} 
+                {
+                    padding: rem-calc(90) 15% rem-calc(90) 15%;                    
+                }
+            }
+        }
+
+        &.layout_half
+        {
+            .product_infos
+            {
+                @media #{$large-up} 
+                {
+                    padding: 14% 16%;
+                }
+            }
+        }
+    }
+}        

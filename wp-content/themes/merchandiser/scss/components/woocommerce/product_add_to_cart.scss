@@ -1,0 +1,44 @@
+.woocommerce {
+    
+    .product_infos {
+
+        .cart {
+            
+            margin-bottom: 35px;
+            width: 100%;
+            display: table;
+            
+            @media #{$large-up}
+            {
+                display: inherit;
+                margin-bottom: 20px; 
+            }
+             
+            .quantity {
+                
+                display: table-cell;
+                width: rem-calc(95); 
+                padding-right: 25px;
+                float: none;
+                 
+                @media #{$large-up}
+                {
+                    float: left;
+                }
+
+                .screen-reader-text {
+                    display: none;
+                }
+
+            }
+
+            .single_add_to_cart_button {
+
+                // padding-left: rem-calc(20); 
+            }
+
+        }
+        
+    }
+
+}

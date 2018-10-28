@@ -1,0 +1,57 @@
+.woocommerce 
+{
+
+	.woocommerce-tabs 
+    {
+
+    	.shop_attributes 
+    	{
+    		th 
+    		{
+    			font-weight: bold;
+
+                font-size: rem-calc(12);
+                padding: rem-calc(8) 0;
+
+                @media #{$large-up} 
+                {
+                   font-size: rem-calc(14);
+                   padding: rem-calc(20) 0;
+                }
+    		}
+
+    		tr 
+    		{
+    			border-bottom: solid 2px #ddd;
+
+    			&:last-child 
+    			{
+    				border-bottom: none;
+    			}
+    			
+    			td 
+    			{
+                    padding: rem-calc(8) 0;
+
+                    @media #{$large-up} 
+                    {
+                       padding: rem-calc(20) 0;
+                    }
+
+    				p 
+    				{
+    					margin: 0;
+                        font-size: rem-calc(12);
+
+                        @media #{$large-up} 
+                        {
+                           font-size: rem-calc(18);
+                        }
+    				}
+    			}
+    		}
+    	}
+
+    }
+
+}

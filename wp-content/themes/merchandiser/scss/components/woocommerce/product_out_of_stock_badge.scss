@@ -1,0 +1,17 @@
+.out_of_stock {
+
+    text-transform: uppercase;
+	border-width: 2px;
+	border-style: solid;
+	border-color: $secondary-color;
+	border-radius: 5px;
+	display: inline-block;
+	padding: rem-calc(2) rem-calc(7) rem-calc(1) rem-calc(7);
+	margin: 0 rem-calc(2);
+	font-size: rem-calc(9);
+	line-height: 1.3em;
+	font-weight: bold;
+	color: $secondary-color;
+	letter-spacing: 0.1em;
+
+}

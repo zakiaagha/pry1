@@ -1,0 +1,60 @@
+.woocommerce
+{
+	form.track_order
+	{
+		text-align: center;
+		margin-bottom: 160px;
+
+		&:before
+		{
+			content: "";
+			text-align: center;
+			display: inline-block;
+			width: 130px;
+			height: 130px;
+			text-align: center;
+			background: url(../images/track-order.png) center center no-repeat;
+			margin-bottom: 50px;
+			margin-top: 50px;
+		}
+
+		p:first-child 
+		{
+			font-size: rem-calc(21);
+		}
+
+		p.form-row
+		{
+			display: inline-block;
+			font-size: rem-calc(12);
+
+			label {
+				text-align: left;
+			}
+
+			&.form-row-first, &.form-row-last
+			{
+				width: 30%;
+				float: none;
+			}
+
+			&.form-row-last
+			{
+				margin: 0 5%;
+			}
+		}
+
+		input
+		{
+			&[type="submit"]
+			{
+				padding: 13px 20px;
+			}
+		}
+
+		.clear 
+		{
+			display: none;
+		}
+	}
+}

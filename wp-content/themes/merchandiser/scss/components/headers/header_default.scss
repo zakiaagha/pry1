@@ -1,0 +1,323 @@
+.site-header {
+	
+	background-color: $gainsboro;	
+	width: 100%;
+	position: absolute;	
+	z-index: 98;
+	top: 0;	
+	font-size: 14px;
+	transition: transform $offcanvas_speed $offcanvas_easing .3s, background .3s ease;
+	body.header-transparent:not(.header-sticky-scroll) & { background-color: transparent; }
+	body.header-sticky & { position: fixed; }
+	body.admin-bar.header-sticky & { top: $wpadminbar_mobile_height; }
+
+	.header-wrapper {
+		
+		width: 100%;
+		margin: 0 auto;
+		height: $header-height;
+		position: relative;
+		display: none;
+
+		.site-branding {
+		
+			display: table-cell;
+			vertical-align: middle;
+			transition: all 0.3s ease;
+
+			body.header-layout-1 & { text-align: left; }
+			body.header-layout-2 & { text-align: center; width: 20%; }			
+
+			.site-logo {
+
+				transition: opacity 0.3s ease;
+
+				img {
+					max-width: inherit;
+					height: $header-height;	
+					// backface-visibility: hidden;
+    				// transform: translateZ(0) scale(1.0, 1.0);
+
+    				backface-visibility: inherit;
+					transform: none;
+
+					body.header-layout-1 & { margin: 0 rem-calc(20) 0 rem-calc(40); }
+					body.header-layout-2 & { margin-left: 0; }			
+				}
+
+				&:hover { opacity: 0.5; }
+
+				a 
+				{
+					.header-sticky-scroll & 
+					{
+						display: none;
+					}
+				}
+
+				.sticky-header-logo
+				{
+					display: none;
+
+					.header-sticky-scroll & 
+					{
+						display: block;
+					}
+				}
+				
+			}
+
+			.site-title {
+				
+				white-space: nowrap;
+				font-weight: bold;
+				text-transform: uppercase;
+				padding: 1em 0;
+				line-height: 1em;
+				transition: all 0.3s ease;
+
+				&:hover { opacity: 0.5; }
+
+				a {
+					font-size: rem-calc(30);
+					text-transform: lowercase;
+					font-weight: bold;
+					line-height: rem-calc(30);
+					body.header-layout-1 & { margin: 0 rem-calc(20) 0 rem-calc(40); }
+					body.header-layout-2 & { margin-left: 0; }
+				}
+			}
+		}
+
+		.nav {
+			
+			display: table-cell;
+			text-align: left;
+			vertical-align: middle;
+			width: 100%;
+
+			opacity: 0;
+			animation: global_fadein 1.5s forwards;
+			animation-delay: .5s;
+			.ie9 & { opacity: 1; }
+
+			body.header-layout-2 & { width: 40%; }
+		}
+
+		.tools {
+
+			display: table-cell;
+			vertical-align: middle;
+			padding-right: 35px;
+
+			opacity: 0;
+			animation: global_fadein 1.5s forwards;
+			animation-delay: .5s;
+			.ie9 & { opacity: 1; }
+
+			body.header-layout-2 & { width: 40%; }
+
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: table;
+				text-align: right;
+				float: right;
+				//padding: 1em 0;
+				font-size: 1em;
+
+				li {
+					
+					padding: 0 0 0 15px;
+					margin: 0;
+					display: table-cell;
+					line-height: 1em;
+					vertical-align: middle;
+
+					&:first-child {
+						padding: 0;
+					}
+
+					a.tools_button {
+						display: table;
+						white-space: nowrap;
+						color: $site-header-color;
+						position: relative;
+
+						&:hover {
+							color: $site-header-color-hover;
+						}
+
+						.tools_button_icon {
+							
+							display: table-cell;
+							width: 32px;
+							height: 32px;
+							padding: 5px;
+							vertical-align: middle;
+
+							&.uploaded_icon {
+
+								text-align: center;
+								vertical-align: middle;
+								opacity: 1;
+								transition: opacity 0.3s ease;
+
+								&:hover {
+									opacity: .5;
+								}
+
+								img {
+									max-width: 22px;
+									max-height: 22px;
+									display: block;
+								}
+
+								svg {
+									display: inherit;
+									width: 22px;
+									height: 22px;
+									transition: all 0.3s ease;
+									fill: $site-header-color;
+								}
+
+							}
+							
+						}
+
+						.shopping_bag_items_number,
+						.wishlist_items_number
+						{
+							position: absolute;
+							top: 0;
+							right: 0;
+							width: 14px;
+							height: 14px;
+							line-height: 1.8em;
+							background-color: $site-header-color;
+							color: #000;
+							text-align: center;
+							border-radius: 100px;
+							font-size: 9px;
+
+							&.visible {
+								visibility: visible;
+							}
+						}
+					}
+
+					/*&:last-child {
+						a.tools_button {
+							.tools_button_icon {
+								padding-right: 0;
+							}
+						}
+					}*/
+				}
+			}
+		}
+	}
+}
+
+/* Offcanvas - Left */
+body.offcanvas_left {	
+	.site-header {
+		transform: translate3d($offcanvas_mobile_width, $offcanvas_top_offset, 0);
+	}
+}
+
+/* Offcanvas - Right */
+body.offcanvas_right {	
+	.site-header {
+		transform: translate3d(-$offcanvas_mobile_width, $offcanvas_top_offset, 0);
+	}
+}
+
+.myaccount-popup {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	padding: 50px 0 50px 0;
+	display: none;
+	box-shadow: 0px 10px 80px -25px rgba(0,0,0,0.4);
+	animation-duration: .4s;
+	animation-name: header_dropdowns_anim;
+
+	.woocommerce-account .woocommerce #customer_login input[type="submit"]
+	{
+		bottom: -15px;
+	}
+}
+
+
+// Media Queries
+
+@media #{$large-up} {
+
+	.site-header {	
+
+		.header-wrapper {
+			display: table;
+		}
+
+		.tools {	
+			ul {
+				padding: 0;
+			}			
+		}
+	}
+
+	/* Offcanvas - Left */
+	body.offcanvas_left {		
+		
+		.site-header {
+			transform: translate3d($offcanvas_largeup_width, $offcanvas_top_offset, 0);
+			.ie9 & {
+				left: $offcanvas_largeup_width;
+			}
+		}
+
+		&.offcanvas_for_quickview {
+			.site-header {
+				transform: translate3d($offcanvas_quickview_largeup_width, $offcanvas_top_offset, 0);
+				.ie9 & {
+					left: $offcanvas_quickview_largeup_width;
+				}
+			}
+		}
+
+	}	
+
+	/* Offcanvas - Right */
+	body.offcanvas_right {		
+		
+		.site-header {
+			transform: translate3d(-$offcanvas_largeup_width, $offcanvas_top_offset, 0);
+			.ie9 & {
+				right: $offcanvas_largeup_width;
+			}
+		}
+
+		&.offcanvas_for_quickview {
+			.site-header {
+				transform: translate3d(-$offcanvas_quickview_largeup_width, $offcanvas_top_offset, 0);
+				.ie9 & {
+					right: $offcanvas_quickview_largeup_width;
+				}
+			}
+		}
+		
+	}	
+
+}
+
+// fix position when wpadminbar is active
+@media only screen and (min-width: $wpadminbar_breakpoint) {
+	body.admin-bar.header-sticky {	
+		.site-header {		
+			top: $wpadminbar_large_height;
+		}
+	}
+}

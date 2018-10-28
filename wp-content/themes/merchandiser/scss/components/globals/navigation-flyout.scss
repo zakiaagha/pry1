@@ -1,0 +1,301 @@
+/**********************************************************************************/
+/* Navigation / Large Screens *****************************************************/
+/**********************************************************************************/
+
+.main-navigation-flyout {
+    
+    text-align: left;
+	height: auto;
+    display: none;
+    @media #{$large-up} { display: block; }
+
+	// Level 1
+
+	> ul {
+		
+		font-size: 1em;
+		padding: 1em 0;
+		margin: 0;
+		list-style: none;
+		margin-left: -1em;
+
+		&:after {
+			content: "";
+			clear: both;
+			display: block;
+		}
+
+		> li {
+
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 1em;
+
+			> a {
+				padding: 0.5em 1em;
+
+				&:hover { opacity: .5; }
+			}
+
+			a {
+				display: inline-block;
+				text-decoration: none;
+				text-transform: uppercase;
+		        color: $site-header-color;
+		        opacity: 1;		
+				font-weight: bold;
+				transition: all 0.2s ease-out;
+				min-height: 100%;
+
+				&:hover {
+					color: $site-header-color-hover;
+				}
+			}
+
+			&.call-to-action > a {
+				border-width: 1px;
+				border-style: solid;		
+				border-radius: 0.3125em;
+			}
+
+			&.menu-item-has-children {
+					
+				> a:after {
+					font-family: FontAwesome;
+					font-style: normal;
+					font-weight: normal;
+					text-decoration: inherit;
+					content: "\f107";
+					margin-left: 0.3125em;
+				}
+			}
+
+			// Flyout Menu
+
+			&:not(.mega-menu) {
+
+				position: relative;
+				
+				// Level 2
+
+				ul {
+
+					font-size: 0.85em;
+					line-height: 2em;
+					padding: 1em 0;
+					margin: 0;
+					list-style: none;				
+					background: #fff;
+					display: none;					
+					position: absolute;
+					top: 100%;
+					left: -1em;
+					width: 19em;
+					z-index: 99999;
+					box-shadow: 0 0 0.3125em rgba(0,0,0,0.20);	
+					animation-duration: .3s;
+					animation-fill-mode: both;
+					animation-name: main_nav_anim;
+
+					li {
+						
+						display: block;
+						position: relative;
+						text-align: left;
+						z-index: 99999;
+
+						&.menu-item-has-children {
+							
+							> a:after {
+								font-family: FontAwesome;
+								font-style: normal;
+								font-weight: normal;
+								text-decoration: inherit;
+								content: "\f105";
+								margin-left: 0.625em;
+							}
+						}
+
+						a {
+							
+							margin: 5px 2.3em;
+							padding:0;
+							line-height: 2em;
+							border-bottom: 2px solid transparent;
+							text-transform: none;
+							font-weight: normal;
+							color: #000 !important;
+
+							&:hover {
+								border-bottom-width: 2px;
+								border-bottom-style: solid;
+								border-bottom-color: #ccc;
+								opacity: .5;
+							}
+
+						}
+
+						// Level 3
+
+						ul {
+							left: 100%;
+							top: -1em;
+							font-size: 1em;
+						}
+
+						&:hover {
+									
+							transition: all 0.3s ease-out;
+
+							> ul {
+								display: block;
+							}
+						}
+
+					}
+				}
+
+			}
+
+			// Mega Menu
+
+			&.mega-menu {
+
+				position: relative;
+
+				// Level 2
+
+				> ul {
+					
+					font-size: 1em;
+					line-height: 2em;
+					padding: 1.563em 0 0 0;
+					margin: 0;
+					list-style: none;		
+					background: #fff;
+					display: none;		
+					position: absolute;
+					top: 100%;
+					left:-1.25em;
+					z-index: 99999;
+					box-shadow: 0 0 0.3125em rgba(0,0,0,0.20);	
+					animation-duration: .3s;
+					animation-fill-mode: both;
+					animation-name: main_nav_anim;
+
+					> li {
+						
+						display: table-cell;
+						text-align: left;
+
+						a {
+									
+							margin: 0.3125em 2.188em;
+							padding:0;
+							border-bottom: 2px solid transparent;
+							text-transform: none;
+							//font-weight: 500;
+							color: #000 !important;
+
+							&:hover {
+								border-bottom-width: 2px;
+								border-bottom-style: solid;
+								border-bottom-color: #ccc;
+								opacity: .5;
+							}
+
+						}
+
+						> a {
+							text-transform: uppercase;
+							font-weight: bold;
+						}
+
+						// Level 3
+
+						ul {
+						    font-size: 1em;
+							line-height: 2em;
+							padding: 1.563em 0 0 0;
+							margin: 0;
+							list-style: none;				
+						    
+						    display: block;
+							font-weight: normal;
+							margin: 0;
+							padding: 0.3125em 0 1.25em 0;
+				            width: 19em;
+						}
+
+						&.menu-item-has-children a:after,
+						&.page_item_has_children a:after
+						{
+							display: none;
+						}
+					}
+
+					&.with_bg_image {
+						padding: 1.563em 9.375em 0 0;
+						background-position: top right;
+						background-repeat: no-repeat;
+						background-size: contain;
+					}
+
+				}
+
+			}
+
+			&:hover {
+						
+				transition: all 0.3s ease-out;
+
+				> a {
+					opacity: 0.5;
+				}
+
+				> ul {
+					display: block;
+				}
+			}	
+			
+		}
+
+	}
+
+	// Align Left
+
+	&.align_left {
+		text-align: left;
+		padding-left: 40px;
+	}	
+	
+	// Align Center
+
+	&.align_center {
+		text-align: center;
+	}
+	
+	// Align Right
+
+	&.align_right {
+		
+		text-align: right;
+		padding-right: 40px;
+
+		> ul > li:not(.mega-menu) ul ul {
+	        left: -100%;
+	    }
+	}
+
+}
+
+@keyframes main_nav_anim {
+	0% {
+		opacity: 0;
+		margin: 0.9375em 0 0 0;
+	}
+	100% {
+		opacity: 1;
+		margin: 0;
+	}
+}

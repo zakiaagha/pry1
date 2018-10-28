@@ -1,0 +1,71 @@
+.woocommerce {
+
+	table.variations {
+
+		//margin-bottom: rem-calc(30);
+
+		tr {
+			border: 0;
+			margin: 0 0 30px 0;
+		}
+
+		td {
+			padding: 0;
+
+			&.value,
+			&.label
+			{
+				float: left;
+				display: block;
+				width: 100%;
+
+				label 
+				{
+					font-weight: bold;
+					font-size: rem-calc(12);
+				}
+
+				select
+				{
+					//padding: rem-calc(20) rem-calc(20);
+					//line-height: rem-calc(20);
+					height: rem-calc(60);
+					font-size: rem-calc(18);
+					letter-spacing: -0.03em;
+				}
+			}
+		}
+
+		.variations_label_content
+		{
+			label 
+			{
+				font-weight: bold;
+				font-size: rem-calc(12);
+			}
+		}
+
+		.reset_variations {
+			font-size: rem-calc(14);
+		}
+
+	}
+
+	.single_variation {
+
+		.price {
+			display: block;
+			font-size: $h2-font-size;
+	        margin-bottom: rem-calc(30);
+	        font-weight: bold;
+	        line-height: 1em;
+
+	        del {
+                display: block;
+                font-size: $h3-font-size;
+                font-weight: normal;
+            }
+    	}
+	}
+
+}

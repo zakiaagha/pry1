@@ -1,0 +1,315 @@
+html {
+	font-family: Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html,body 
+{
+	height: auto;
+}
+
+a {
+	transition: all .3s;
+
+	// &:hover 
+	// {
+	// 	opacity: .35;
+	// }
+}
+
+.hover-me-nice
+{
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 13px;  
+	
+	&:after
+	{
+		content: "";
+		display: block;
+		width: 100%;
+		height: 2px;
+		background: #5F5F5F;  
+		transition: all 0.3s ease-in-out;
+		margin-top: 2px; 
+	}
+
+	&:hover
+	{
+		color: rgba(0, 0, 0, 0.5);
+		 		
+		&:after
+		{
+			width: 0; 
+		}
+	}
+
+}
+
+h6 a:hover
+{
+	opacity: .35;
+}
+
+form {
+	margin: 0;
+}
+
+label {
+    text-transform: uppercase;
+}
+
+table {
+    
+    width: 100%;
+
+    th {
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: 0.8125rem;
+        text-align: left;
+        color: #aaa;
+        padding: rem-calc(20) 0;
+    }
+    
+    td {
+        padding: rem-calc(20) 0;
+    }
+
+    thead th {
+        padding: rem-calc(20) 0;
+    }    
+    
+}
+
+h6 {
+	letter-spacing: rem-calc(2);
+}
+
+p {
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="color"],
+textarea,
+select
+{
+	font-weight: bold;
+	padding-left: rem-calc(15);
+	padding-right: rem-calc(15);
+}
+
+select {
+	//margin: 0;
+	background-position: 98% center;
+}
+
+blockquote {
+	
+	padding-left: rem-calc(40);
+
+	> p {
+		font-size: rem-calc(32);
+		line-height: 1.4;
+	}
+
+	cite {
+		margin-top: rem-calc(10);
+	}
+
+}
+
+figure {
+	
+	max-width: 100%;
+	margin: 0;
+}
+
+.aligncenter {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+figcaption {
+	font-size: rem-calc(12);
+	margin: rem-calc(10) 0;
+}
+
+dl {
+	dd {
+		p {
+			margin: 0;
+		}
+	}
+}
+
+iframe
+{
+	border: 0;
+}
+
+#wpadminbar {
+    transform: translateZ(0);
+}
+
+.page-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.clear {
+    @include clearfix;
+}
+
+.fullwidth {
+	
+	> #main {
+		
+		> .row {
+			max-width: none;
+		}
+	}
+
+	.page-title {
+		margin-bottom: 0;
+	}
+
+}
+
+.single-product {
+	.row {
+		max-width: 100%;
+	}
+}
+
+.columns.no-pad {
+	padding: 0;
+}
+
+#secondary.widget-area {
+	min-height: calc(100vh - 148px);
+}
+
+/********************************************************************************/
+/* Fix WP Admin Bar on mobiles
+/********************************************************************************/
+
+@media screen and (max-width: 782px) {
+    #wpadminbar {
+		position: fixed !important;
+	}
+}
+
+@media #{$large-up} {
+	
+	.alignleft {
+		float: left;
+		margin: 0 20px 20px 0;
+	}
+
+	.alignright {
+		float: right;
+		margin: 0 0 20px 20px;
+	}
+
+	figure {
+		
+		&.alignleft {
+			margin: 0 20px 20px 0;
+		}
+
+		&.alignright {
+			margin: 0 0 20px 20px;
+		}
+	}
+
+	.main-with-sidebar {
+		
+		.alignleft {
+			float: left;
+			margin: 0 20px 20px 0;
+		}
+
+		.alignright {
+			float: right;
+			margin: 0 0 20px 20px;
+		}
+
+		figure {
+			
+			&.alignleft {
+				margin: 0 20px 20px 0;
+			}
+
+			&.alignright {
+				margin: 0 0 20px 20px;
+			}
+		}
+	}
+}
+
+.wp-caption,
+.wp-caption-text,
+.gallery-caption,
+.bypostauthor
+{
+	line-height: 1;
+}
+
+@keyframes global_fadein {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+
+@keyframes forceOpacity {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.single-post
+{
+	@media #{$large-up}
+	{
+		.alignleft {
+
+			float: left;
+			margin: 0 20px 20px -100px;
+		}
+		.alignright 
+		{
+			float: right;
+			margin: 0 -100px 20px 20px;
+		}
+
+		figure 
+		{
+			
+			&.alignleft {
+				margin: 0 20px 20px -100px;
+			}
+
+			&.alignright {
+				margin: 0 -100px 20px 20px;
+			}
+		}
+	}
+}

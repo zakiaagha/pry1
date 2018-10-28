@@ -1,0 +1,301 @@
+.woocommerce-account
+{
+
+	.woocommerce 
+	{
+
+		#customer_login 
+		{
+			width: 100%;
+			position: relative;
+			margin: 0 auto;
+			padding: rem-calc(20);
+			font-size: rem-calc(12);
+
+			.woocommerce-password-strength
+			{
+				margin: -10px 0 20px 0;
+			}
+
+			small.woocommerce-password-hint
+			{
+				margin: -20px 0 20px 0;
+    			display: block;
+    			font-size: rem-calc(10);
+			}
+
+			
+			h2 
+			{
+				width: 50%;
+				font-size: rem-calc(12);
+				padding-bottom: rem-calc(20);
+				margin-bottom: rem-calc(20);
+				color: $secondary-color;
+				z-index: 99;
+				float: left;
+				display: block;
+				cursor: pointer;
+				transition: all 0.3s;
+				border-bottom: solid 4px $secondary-color;
+				transition: all 0.3s;
+
+				&.loginTab
+				{
+					margin-left: 0;
+				}
+
+				&.active
+				{
+					color: $primary-color;
+					border-bottom: solid 4px $primary-color;
+				}
+			}
+
+
+			input
+			{
+				&[type="submit"] 
+				{
+					position: absolute;
+					bottom: -30px;
+					width: 100%;
+					text-align: center;
+					// margin-top: 30px;
+					@media #{$large-up}  
+					{
+						bottom: auto;
+					}
+				}
+			}
+
+			p
+			{
+				font-size: rem-calc(12);
+				line-height: 2;
+
+				&.lost_password 
+				{
+					text-align: right;
+				}
+
+				&.sendbutton
+				{
+					margin-top: rem-calc(40);
+				}
+
+				&.form-row
+				{
+					display: inline-block;
+					width: 100%;
+					position: relative;
+				}
+			}
+
+			
+			label
+			{
+				input 
+				{
+					margin: 0;
+					padding: 0;
+				}
+
+				&[for="rememberme"] 
+				{
+					margin: 0;
+					padding: 0;
+					float: left;
+					text-transform: capitalize;
+					color: $secondary-color;
+					font-size: rem-calc(12);
+				}
+			}
+
+
+			.registerContainer
+			{
+				display: none;
+
+				#reg_password
+				{
+					margin-bottom: 40px;
+				}
+			}
+	
+		}
+
+	}
+	
+}
+
+@media #{$large-up}  
+{
+	.woocommerce-account 
+	{
+		.woocommerce 
+		{
+			#customer_login 
+			{
+				width: rem-calc(320);
+				margin: 0 auto;
+				padding: 0;
+			}
+		}
+	}
+}
+
+
+
+// Pay for Order
+
+.woocommerce-order-pay:not(.logged-in)
+
+{
+	.woocommerce-info
+	{
+		text-align: center;
+		padding-bottom: 15px;
+	}
+
+	.woocommerce 
+	{
+		width: 100%;
+		position: relative;
+		margin: 0 auto;
+		padding: rem-calc(20);
+		font-size: rem-calc(12);
+
+		.woocommerce-password-strength
+		{
+			margin: -10px 0 20px 0;
+		}
+
+		small.woocommerce-password-hint
+		{
+			margin: -20px 0 20px 0;
+			display: block;
+			font-size: rem-calc(10);
+		}
+
+		
+		h2 
+		{
+			width: 50%;
+			font-size: rem-calc(12);
+			padding-bottom: rem-calc(20);
+			margin-bottom: rem-calc(20);
+			color: $secondary-color;
+			z-index: 99;
+			float: left;
+			display: block;
+			cursor: pointer;
+			transition: all 0.3s;
+			border-bottom: solid 4px $secondary-color;
+			transition: all 0.3s;
+
+			&.loginTab
+			{
+				margin-left: 0;
+			}
+
+			&.active
+			{
+				color: $primary-color;
+				border-bottom: solid 4px $primary-color;
+			}
+		}
+
+
+		input
+		{
+			 
+			&[type="submit"] 
+			{
+				position: absolute;
+				bottom: -55px;
+				width: 100%;
+				text-align: center;
+				// margin-top: 30px;
+				@media #{$large-up}  
+				{
+					// bottom: auto;
+				}
+			}
+		}
+
+		p
+		{
+			font-size: rem-calc(12);
+			line-height: 2;
+		    font-weight: normal;
+
+			&.sendbutton
+			{
+				margin-top: rem-calc(40);
+			}
+
+			&.form-row
+			{
+				display: inline-block;
+				width: 50%; 
+				margin: 0;
+				
+				&:first-child,
+				&:nth-child(2)
+				{
+					width: 100%; 
+				}
+			}
+		}
+
+		
+		label
+		{
+			display: inline-block;
+			padding: 0;
+			 
+			input 
+			{
+				margin: 0;
+				padding: 0;
+			}
+
+			span
+			{
+				margin: -4px 5 0 0;
+				padding: 0;
+				text-transform: capitalize;
+				font-size: rem-calc(12);
+			}
+		}
+
+
+		.registerContainer
+		{
+			display: none;
+
+			#reg_password
+			{
+				margin-bottom: 40px;
+			}
+		}
+
+	}
+	
+}
+
+@media #{$large-up}  
+{
+	.woocommerce-order-pay:not(.logged-in) 
+	{
+		.woocommerce
+		{
+			width: rem-calc(320);
+			margin: 0 auto;
+			padding: 1.66667rem 0;
+			
+		}
+		
+	}
+}

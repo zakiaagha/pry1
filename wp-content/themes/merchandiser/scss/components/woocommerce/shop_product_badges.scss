@@ -1,0 +1,13 @@
+.woocommerce {
+        
+    .shop-product-badges {
+
+        display: inline-block;
+        vertical-align: middle;
+
+        @import "shop_product_sale_badge";
+        @import "shop_product_out_of_stock_badge";
+
+    }
+
+}

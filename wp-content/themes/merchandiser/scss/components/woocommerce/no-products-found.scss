@@ -1,0 +1,72 @@
+body.search-no-results
+{
+
+	&.woocommerce
+	{
+		.woocommerce-no-products
+		{
+			padding: 0 30px; 
+			display: table;
+			position: relative;
+			width: 100%;
+			max-width: 868px;
+			margin: 80px auto;
+			min-height: auto;
+
+			@media #{$large-up}  
+			{	
+				padding: 0;
+				margin: 100px auto;
+				
+				min-height: rem-calc(428);
+			}
+
+			&:before 
+			{
+				content: "\f002";
+				font-family: FontAwesome;
+				font-size: 100px;
+				font-weight: bold;
+				line-height: 100px;
+				margin-bottom: 30px;
+				width: 100%;
+				text-align: center;
+				display: block;
+
+				@media #{$large-up}  
+				{
+					content: "";
+					text-align: center;
+					width: rem-calc(428);
+					height: rem-calc(428);
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					margin-top: - rem-calc(214);
+					margin-left: - rem-calc(214);
+					text-align: center;
+					z-index: 1;
+					background: url(../images/big-search.png) center center no-repeat;
+				}
+			}
+			
+			p 
+			{
+				font-size: rem-calc(24);
+				line-height: rem-calc(30);
+				font-weight: bold;
+				text-align: center;
+
+				@media #{$large-up}  
+				{
+					font-size: rem-calc(48);
+					position: relative;
+					line-height: 1.25;
+					display: table-cell;
+					vertical-align: middle;
+					z-index: 2;
+				}
+			}
+		}
+	}
+}

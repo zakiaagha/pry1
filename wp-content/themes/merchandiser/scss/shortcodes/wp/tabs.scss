@@ -1,0 +1,65 @@
+.vc_tta-container
+{
+	.vc_tta-tabs
+	{
+		.vc_tta.vc_general
+		{
+			.vc_tta-tabs-container
+			{
+				.vc_tta-tab
+				{
+					margin-top: 8px;
+					margin-bottom: 7px;
+				    margin-left: 8px;
+				    margin-right: 7px;
+
+					> a
+					{
+						font-size: rem-calc(18);
+						font-weight: bold;
+						padding: rem-calc(14) rem-calc(30) rem-calc(12) rem-calc(30);
+					    background-color: #fafafa;
+	    				color: #666666;
+					    
+					    &:hover
+					    {
+					    	background: #f2f2f2
+					    }
+					}
+
+					&.vc_active
+					{
+						> a 
+						{
+
+	    					&:hover 
+	    					{
+	    						background: #f2f2f2
+	    					}
+						}
+					}
+				}
+			}
+
+			.vc_tta-panel-title
+			{
+				font-size: rem-calc(16);
+			}
+
+			.vc_tta-panel
+			{
+				margin-bottom: -12px;
+
+				@media #{$large-up}
+				{
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.vc_tta-title-text
+		{
+			font-weight: bold;
+		}
+	}
+}

@@ -1,0 +1,14 @@
+.entry-content {
+    
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	margin-bottom: 40px;
+	padding: 0 15px;
+
+	@media #{$large-up}  
+	{
+		margin-bottom: 80px;
+		padding: 0;
+	}
+
+}

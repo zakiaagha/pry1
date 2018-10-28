@@ -1,0 +1,113 @@
+/* Poppins */
+
+@font-face {
+    font-family: 'embed-poppins';
+    src: url('poppins/poppins-regular-webfont.eot');
+    src: url('poppins/poppins-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('poppins/poppins-regular-webfont.woff2') format('woff2'),
+         url('poppins/poppins-regular-webfont.woff') format('woff'),
+         url('poppins/poppins-regular-webfont.ttf') format('truetype'),
+         url('poppins/poppins-regular-webfont.svg#embed-poppins') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'embed-poppins';
+    src: url('poppins/poppins-bold-webfont.eot');
+    src: url('poppins/poppins-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('poppins/poppins-bold-webfont.woff2') format('woff2'),
+         url('poppins/poppins-bold-webfont.woff') format('woff'),
+         url('poppins/poppins-bold-webfont.ttf') format('truetype'),
+         url('poppins/poppins-bold-webfont.svg#embed-poppins') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+
+
+/* PT Serif */
+
+@font-face {
+    font-family: 'embed-ptserif';
+    src: url('ptserif/ptserif-regular-webfont.eot');
+    src: url('ptserif/ptserif-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('ptserif/ptserif-regular-webfont.woff') format('woff'),
+         url('ptserif/ptserif-regular-webfont.ttf') format('truetype'),
+         url('ptserif/ptserif-regular-webfont.svg#embed-ptserif') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'embed-ptserif';
+    src: url('ptserif/ptserif-bold-webfont.eot');
+    src: url('ptserif/ptserif-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('ptserif/ptserif-bold-webfont.woff') format('woff'),
+         url('ptserif/ptserif-bold-webfont.ttf') format('truetype'),
+         url('ptserif/ptserif-bold-webfont.svg#embed-ptserif') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'embed-ptserif';
+    src: url('ptserif/ptserif-italic-webfont.eot');
+    src: url('ptserif/ptserif-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('ptserif/ptserif-italic-webfont.woff') format('woff'),
+         url('ptserif/ptserif-italic-webfont.ttf') format('truetype'),
+         url('ptserif/ptserif-italic-webfont.svg#embed-ptserif') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+
+
+/* radnika */
+
+@font-face {
+    font-family: 'radnika';
+    src: url('radnika/Radnika-Regular.eot');
+    src: url('radnika/Radnika-Regular.eot?#iefix') format('embedded-opentype'),
+         url('radnika/Radnika-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'radnika';
+    src: url('radnika/Radnika-Bold.eot');
+    src: url('radnika/Radnika-Bold.eot?#iefix') format('embedded-opentype'),
+         url('radnika/Radnika-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+
+
+
+/* arcamajora */
+
+@font-face {
+    font-family: 'arcamajora';
+    src: url('arcamajora3/ArcaMajora3-Bold.eot');
+    src: url('arcamajora3/ArcaMajora3-Bold.eot?#iefix') format('embedded-opentype'),
+         url('arcamajora3/ArcaMajora3-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'arcamajora';
+    src: url('arcamajora3/ArcaMajora3-Heavy.eot');
+    src: url('arcamajora3/ArcaMajora3-Heavy.eot?#iefix') format('embedded-opentype'),
+         url('arcamajora3/ArcaMajora3-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+

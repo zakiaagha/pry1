@@ -1,0 +1,30 @@
+body.catalog-mode {
+
+    .shopping-bag-button,
+    a.product_type_simple,
+    a.product_type_variable,
+    a.product_type_grouped,
+    form.cart,
+    .variations_button,
+    .shop-product-badges,
+    .product-badges,
+    .out-of-stock
+    {
+        display: none !important;
+    }
+
+    .offcanvas_quickview 
+    {
+        .product_content_wrapper 
+        {
+            .product_infos
+            {
+                h1
+                {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+}

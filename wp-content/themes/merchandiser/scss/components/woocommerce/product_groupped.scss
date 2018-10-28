@@ -1,0 +1,58 @@
+.woocommerce
+{
+	.product_infos
+	{
+		.group_table
+		{
+			margin-bottom: rem-calc(50);
+
+			tr
+			{
+				border: none;
+
+				td 
+				{
+					padding: rem-calc(10) 0;
+					font-size: rem-calc(12);
+
+					&:first-child
+					{
+						width: 100px;
+					}
+
+					label {
+						text-transform: none;
+					}
+
+					a 
+					{
+						font-size: rem-calc(12);
+						font-weight: bold;
+
+						&.button
+						{
+							margin-right: 30px;
+    						padding: 15px;
+						}
+					}
+
+					.out-of-stock 
+					{
+						float: left;
+						background: transparent;
+						margin: rem-calc(2) rem-calc(5) 0 0;
+						text-transform: uppercase;
+						font-size: rel-calc(8);
+						font-weight: bold;
+						display: block;
+					}
+
+					&.woocommerce-grouped-product-list-item__price
+					{
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+}

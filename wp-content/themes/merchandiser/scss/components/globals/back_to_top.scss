@@ -1,0 +1,65 @@
+.cd-top {
+  display: none;
+
+  @media #{$medium-up}  
+  {
+    display: inline-block;
+  }
+  
+  position: fixed;
+  height: 60px;
+  width: 60px;
+  right: 0;
+  bottom: 0;
+
+  box-shadow: 0 0 rem-calc(10) rgba(#000, .05);
+
+  /* image replacement properties */
+  overflow: hidden; 
+  text-indent: 100%;
+  white-space: nowrap;
+
+  background: rgba(0, 0, 0, 0.2) url(../images/back-to-top.svg) no-repeat center 50%;
+  
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  z-index: 999;
+
+
+  &.cd-is-visible { /* the button becomes visible */
+    visibility: visible;
+    opacity: 1;
+    bottom: 37px;
+  }
+
+  &.cd-fade-out { /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    // opacity: .5;
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, 1) url(../images/back-to-top.svg) no-repeat center 50%;
+    opacity: 1;
+  }
+
+  .offcanvas_open &
+  {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@media #{$large-up} 
+{
+
+  .cd-top 
+  {
+    height: rem-calc(60);
+    width: rem-calc(60);
+    right: 0;
+    bottom: 0;
+  }
+}

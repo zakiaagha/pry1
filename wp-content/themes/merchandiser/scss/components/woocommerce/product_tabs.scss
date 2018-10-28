@@ -1,0 +1,85 @@
+.woocommerce
+{
+
+    .woocommerce_tabs_wrapper
+    {
+        background-color: #f1f1f1;
+        padding: 0 rem-calc(15);
+        margin-top: 0;
+
+        @media #{$large-up} 
+        {
+            padding: 30px 0 60px 0;
+        }
+
+        .row 
+        {
+            max-width: $boxed-width;
+        }
+    }
+
+	.woocommerce-tabs
+    {
+        
+        margin: rem-calc(30) 0;
+        
+        ul.tabs
+        {
+            margin: 0 0 rem-calc(40) 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+
+            @media #{$large-up} 
+            {
+                margin: 0 0 rem-calc(50) 0;
+            }
+
+            li {
+                display: inline-block;
+                font-weight: bold;
+                font-size: rem-calc(18);
+                padding: 0 rem-calc(25);
+                margin: 5px 0;
+                width: 100%;
+
+                @media #{$large-up} 
+                {
+                    width: auto;
+                }
+
+                a {
+                    padding: rem-calc(5) 0;
+                    display: inline-block;
+                    //color: $secondary-color;
+                    border-bottom: 2px solid transparent;
+
+                    sup {
+                        padding: 0 0 0 3px;
+                        font-size: rem-calc(12);
+                        color: $secondary-color-ultra-light;
+                    }
+                }
+
+                &.active {  
+
+                    a {
+                        cursor: default;  
+                        color: $secondary-color;
+                        border-bottom: 2px solid #000;
+
+                        // @media #{$large-up} 
+                        // {
+                        //     border-bottom: 2px solid #000;
+                        // }
+                    }
+                }
+            }
+        }
+	}
+}
+
+// product page shortcode
+body.page-template-default .woocommerce_tabs_wrapper .row {
+    margin: 0 auto!important;
+}

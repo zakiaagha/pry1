@@ -1,0 +1,8 @@
+.shortcode_title
+{
+	@media #{$small-only}
+	{
+		font-size: rem-calc(24) !important;
+		line-height: 1.2 !important;
+	}
+}

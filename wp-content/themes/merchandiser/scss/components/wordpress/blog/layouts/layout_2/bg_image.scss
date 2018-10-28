@@ -1,0 +1,33 @@
+.bg-image-wrapper
+{
+	height: 305px; 
+	width: 100%;
+	height: 305px;
+	overflow: hidden;
+	transition: all 0.2s ease-in-out;
+
+	.bg-image
+	{
+		transition: all 0.2s ease-in-out;
+		width: 100%;
+		height: 100%;
+		background-position: center !important;
+		background-size: cover !important;
+		position: relative;
+		
+		&:before
+		{
+		    content: "";
+		    display: block;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    transition: all .2s ease-in-out;
+		    z-index: 3;
+		    background: rgba(0, 0, 0, 0);
+		}
+	}
+}
+

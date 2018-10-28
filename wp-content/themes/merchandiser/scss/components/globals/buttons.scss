@@ -1,0 +1,35 @@
+@mixin global_buttons() {
+
+      @include button;
+      
+      text-transform: uppercase;
+      transition: all 0.3s ease-out;
+      border-color: transparent;
+
+      &:hover {
+      	opacity: .7;
+      }
+
+}
+
+button,
+.button,
+input[type="submit"],
+.vc_btn3
+{
+    @include global_buttons();
+    @include button-size();
+
+    &:disabled {
+      border-color: transparent !important;
+    }
+}
+
+.vc_row .vc_general.vc_btn3 {
+
+      &.vc_btn3-size-xs { @include button-size($padding:$button-tny); }
+      &.vc_btn3-size-sm { @include button-size($padding:$button-sml); }
+      &.vc_btn3-size-md { @include button-size(); }
+      &.vc_btn3-size-lg { @include button-size($padding:$button-lrg); }
+      
+}

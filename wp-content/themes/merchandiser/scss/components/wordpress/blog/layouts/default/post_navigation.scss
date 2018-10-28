@@ -1,0 +1,53 @@
+.posts-navigation 
+{
+    display: block;
+    clear: both;
+
+    .nav-links 
+    {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border-top-width: 1px;
+        border-top-style: solid;
+                   
+        .page-numbers
+        {
+            float: left;
+            display: block;
+            padding: rem-calc(13) rem-calc(24);
+            border-right-width: 1px;
+            border-right-style: solid;
+            font-weight: bold;
+            font-size: rem-calc(12);
+            line-height: rem-calc(25);
+        }
+       
+        .prev,
+        .next 
+        {
+            font-size: rem-calc(16);
+            line-height: rem-calc(25);
+        }
+
+        .next:after
+        {
+            content: "\f105";
+            font-family: FontAwesome;
+        }
+
+        .prev:after 
+        {
+            content: "\f104";
+            font-family: FontAwesome;
+        }
+       
+        &:after 
+        {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+    }
+}

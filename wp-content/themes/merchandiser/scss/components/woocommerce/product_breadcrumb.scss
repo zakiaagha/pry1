@@ -1,0 +1,36 @@
+.woocommerce {
+    
+    &.single {
+
+        .woocommerce-breadcrumb {
+
+            display: none;
+            font-size: rem-calc(10);
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0 0 rem-calc(30) 0;
+            visibility: hidden;
+
+            a {
+                visibility: visible;
+            }
+
+            span {
+            	color: #ccc;
+                visibility: visible;
+
+                &:last-child {
+                    display: none;
+                }
+            }
+
+            @media #{$large-up} 
+            {
+                display: block;
+            }
+
+        }
+        
+    }
+
+}

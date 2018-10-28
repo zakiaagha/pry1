@@ -1,0 +1,71 @@
+//=================================================================================
+// WpAdminBar
+//=================================================================================
+
+#wpadminbar {
+	z-index: 99;
+	transition: all $offcanvas_speed $offcanvas_easing;
+	transition-delay: .3s;
+}
+
+/* Offcanvas - Left */
+.offcanvas_left {	
+	#wpadminbar {
+		transform: translate3d($offcanvas_mobile_width, 0, 0);
+	}
+}
+
+/* Offcanvas - Right */
+.offcanvas_right {	
+	#wpadminbar {
+		transform: translate3d(-$offcanvas_mobile_width, 0, 0);
+	}
+}
+
+// Media Queries
+
+@media #{$large-up} {
+
+	/* Offcanvas - Left */
+	.offcanvas_left {		
+		
+		#wpadminbar {
+			transform: translate3d($offcanvas_largeup_width, 0, 0);
+			.ie9 & {
+				margin-left: $offcanvas_largeup_width;
+			}
+		}
+
+		&.offcanvas_for_quickview {
+			#wpadminbar {
+				transform: translate3d($offcanvas_quickview_largeup_width, 0, 0);
+				.ie9 & {
+					margin-left: $offcanvas_quickview_largeup_width;
+				}
+			}
+		}
+
+	}
+
+	/* Offcanvas - Right */
+	.offcanvas_right {		
+		
+		#wpadminbar {
+			transform: translate3d(-$offcanvas_largeup_width, 0, 0);
+			.ie9 & {
+				margin-right: $offcanvas_largeup_width;
+			}
+		}
+
+		&.offcanvas_for_quickview {
+			#wpadminbar {
+				transform: translate3d(-$offcanvas_quickview_largeup_width, 0, 0);
+				.ie9 & {
+					margin-right: $offcanvas_quickview_largeup_width;
+				}
+			}
+		}
+		
+	}	
+
+}

@@ -1,0 +1,33 @@
+.vc_tta-container
+{
+	.vc_tta-accordion
+	{
+		.vc_tta-panels-container
+		{
+			.vc_tta-panels
+			{
+				.vc_tta-panel-heading
+				{
+					margin-bottom: 0;
+
+					a 
+					{
+						font-size: rem-calc(16);
+						font-weight: bold;
+						padding: rem-calc(14) rem-calc(30) rem-calc(12) rem-calc(30);
+
+						@media #{$large-up}
+						{
+							font-size: rem-calc(18);
+						}
+					}
+				}
+
+				.vc_tta-panel-body
+				{
+					padding: rem-calc(19) rem-calc(30) rem-calc(17) rem-calc(30);
+				}
+			}
+		}
+	}
+}

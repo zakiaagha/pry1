@@ -1,0 +1,145 @@
+.woocommerce-message {
+
+	background-color: $success-color;
+	color: #fff;
+	list-style: none;
+
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	margin: 0;
+
+	overflow: hidden;
+	z-index: 9999;
+
+	transition: opacity 1s ease;
+	transform: translate3d(0,200%,0);
+	animation-name: animFadeMove;
+	animation-fill-mode: both;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-out;
+	animation-delay: 1.5s;
+
+	font-size: rem-calc(13);
+	line-height: rem-calc(17);
+	font-weight: bold;
+	padding: 20px 20px 20px 50px;
+
+	&.inactive
+	{
+		opacity: 0;
+
+	}
+
+	a 
+	{
+		color: #FFF;
+	}
+
+	
+	a:not(.close) {
+		background: transparent;
+		border-bottom: solid 1px #FFF;
+		padding: 0;
+		font-size: rem-calc(14);
+		font-weight: bold;
+		text-transform: none;
+		color: #FFF;
+		margin-left: 5px;
+
+		// position: absolute;
+		// bottom: 0;
+		// left: 50%;
+		// transform: translateX(-50%);
+
+		@media #{$large-up}
+		{
+			&:hover, &:focus, &:active
+			{
+				background: transparent;
+			}
+		}
+	}
+
+	.inner 
+	{
+		transition: opacity .5s;
+		// opacity: 0;
+		// animation-name: animFadeMoveInner;
+		// animation-fill-mode: both;
+		// animation-duration: 0.4s;
+		// animation-timing-function: ease;
+		// animation-delay: 1.2s;
+
+		padding: 0 30px;
+	}
+
+	&:before {
+		display: block;
+		content: "\f05d";
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		font-family: 'FontAwesome';
+		font-size: rem-calc(24);
+		font-weight: normal;
+	}
+
+	a.close
+	{
+		position: absolute;
+		right: 20px;
+		top: 18px;
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		content: "\f00d";
+		font-size:	rem-calc(14);
+		color: #FFF;
+	}
+
+	@media #{$large-up}
+	{
+		font-size: rem-calc(14);
+		line-height: rem-calc(26);
+		padding: 25px 40px 25px 80px;
+
+		&:before 
+		{
+			left: 40px;
+			top: 24px;
+		}
+
+		a.close 
+		{
+			right: 20px;
+			top: 28px;
+		}
+
+		a:not(.close)
+		{
+			position: relative;
+			left: auto;
+			margin: 0 15px;
+			bottom: auto;
+			transform: none;
+		}
+
+		.inner 
+		{
+			padding: 0;
+		}
+	}
+
+}
+
+@keyframes animFadeMove {
+	0% {   transform: translate3d(0,100%,0); }
+	100% {   transform: translate3d(0,0,0); }
+}
+
+@keyframes animFadeOut {
+	0% { opacity: 1;  transform: translate3d(0,0,0); }
+	100% { opacity: 0;  transform: translate3d(0,100%,0); }
+}

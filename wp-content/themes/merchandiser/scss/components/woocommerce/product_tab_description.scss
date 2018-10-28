@@ -1,0 +1,22 @@
+.woocommerce 
+{
+
+	.woocommerce-tabs 
+    {
+
+    	#tab-description 
+    	{
+    		p 
+            {
+                font-size: rem-calc(16);
+
+                @media #{$large-up}
+                {
+                    font-size: rem-calc(18);
+                } 
+            }
+    	}
+
+    }
+
+}

@@ -1,0 +1,551 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Get Bowtied\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-29 16:23+0300\n"
+"PO-Revision-Date: 2015-05-29 14:42+0200\n"
+"Last-Translator: Get Bowtied <hq@getbowtied.com>\n"
+"Language-Team: Get Bowtied <hello@getbowtied.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"esc_html_e;esc_html__;esc_attr\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: woocommerce\n"
+"X-Poedit-SearchPathExcluded-1: js\n"
+"X-Poedit-SearchPathExcluded-2: inc/tgm\n"
+
+#: 404.php:6
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:14
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: comments.php:20
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:31 comments.php:51
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:32 comments.php:52
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:33 comments.php:53
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:63
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:77
+msgid "Leave a Reply"
+msgstr ""
+
+#: comments.php:81
+msgid "Name"
+msgstr ""
+
+#: comments.php:83
+msgid "Email Address"
+msgstr ""
+
+#: comments.php:85
+msgid "Website"
+msgstr ""
+
+#: comments.php:90
+msgid "Message"
+msgstr ""
+
+#: comments.php:96
+#, php-format
+msgid ""
+"Logged in as <a class=\"user\" href=\"%1$s\">%2$s</a>. <a class=\"logout\" "
+"href=\"%3$s\" title=\"Log out of this account\"><i class=\"fa fa-power-off"
+"\"></i> Log out?</a>"
+msgstr ""
+
+#: content-none.php:4
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:10
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: content-none.php:16
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: content-none.php:23
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: content-page.php:7 content-single.php:37 content.php:40
+msgid "Pages:"
+msgstr ""
+
+#: framework/inc/kirki/includes/class-kirki-l10n.php:148
+msgctxt "font style"
+msgid "Serif"
+msgstr ""
+
+#: framework/inc/kirki/includes/class-kirki-l10n.php:149
+msgctxt "font style"
+msgid "Sans Serif"
+msgstr ""
+
+#: framework/inc/kirki/includes/class-kirki-l10n.php:150
+msgctxt "font style"
+msgid "Monospace"
+msgstr ""
+
+#: framework/inc/kirki/includes/sections/class-kirki-sections-hover-section.php:40
+msgid "Press return or enter to open this section"
+msgstr ""
+
+#: framework/inc/kirki/includes/sections/class-kirki-sections-hover-section.php:46
+msgid "Back"
+msgstr ""
+
+#: functions/enqueue-scripts.php:24
+msgid "Load More Items"
+msgstr ""
+
+#: functions/enqueue-scripts.php:25
+msgid "Loading"
+msgstr ""
+
+#: functions/enqueue-scripts.php:26
+msgid "No more items available."
+msgstr ""
+
+#: functions/enqueue-scripts.php:28 header-mobiles.php:25
+msgid "Menu"
+msgstr ""
+
+#: functions/theme-setup.php:28
+msgid "Primary Menu"
+msgstr ""
+
+#: functions/theme-setup.php:29
+msgid "Footer Menu"
+msgstr ""
+
+#: functions/theme-setup.php:30
+msgid "My Account Menu"
+msgstr ""
+
+#: functions/wc/filters.php:83
+msgid "Reviews"
+msgstr ""
+
+#: functions/wc/quick-view.php:41
+msgid "Quick View"
+msgstr ""
+
+#: functions/wc/search.php:105
+msgid "No results"
+msgstr ""
+
+#: functions/wc/single-product-share.php:14
+msgid "Share this product"
+msgstr ""
+
+#: functions/wp/archive-title.php:10
+msgid "Category Archive"
+msgstr ""
+
+#: functions/wp/archive-title.php:12
+msgid "Tag Archive"
+msgstr ""
+
+#: functions/wp/archive-title.php:14
+msgid "Author Archive"
+msgstr ""
+
+#: functions/wp/archive-title.php:16
+msgid "Year Archive"
+msgstr ""
+
+#: functions/wp/archive-title.php:16
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: functions/wp/archive-title.php:18
+msgid "Month Archive"
+msgstr ""
+
+#: functions/wp/archive-title.php:18
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: functions/wp/archive-title.php:20
+msgid "Day Archive"
+msgstr ""
+
+#: functions/wp/archive-title.php:20
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#: functions/wp/archive-title.php:23
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr ""
+
+#: functions/wp/archive-title.php:25
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr ""
+
+#: functions/wp/archive-title.php:27
+msgctxt "post format archive title"
+msgid "Images"
+msgstr ""
+
+#: functions/wp/archive-title.php:29
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr ""
+
+#: functions/wp/archive-title.php:31
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr ""
+
+#: functions/wp/archive-title.php:33
+msgctxt "post format archive title"
+msgid "Links"
+msgstr ""
+
+#: functions/wp/archive-title.php:35
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr ""
+
+#: functions/wp/archive-title.php:37
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr ""
+
+#: functions/wp/archive-title.php:39
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr ""
+
+#: functions/wp/archive-title.php:42 functions/wp/archive-title.php:47
+msgid "Archives"
+msgstr ""
+
+#: functions/wp/comments.php:15
+msgid "Pingback:"
+msgstr ""
+
+#: functions/wp/comments.php:15 functions/wp/comments.php:59
+msgid "Edit"
+msgstr ""
+
+#: functions/wp/comments.php:32
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions/wp/comments.php:35
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: functions/wp/comments.php:40
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: functions/wp/post-meta.php:18
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#: functions/wp/post-meta.php:23
+#, php-format
+msgctxt "post date"
+msgid "on %s"
+msgstr ""
+
+#: functions/wp/post-meta.php:29
+msgid ", "
+msgstr ""
+
+#: functions/wp/post-meta.php:31
+#, php-format
+msgid "in %1$s"
+msgstr ""
+
+#: functions/wp/post-meta.php:36
+msgid "Leave a comment"
+msgstr ""
+
+#: functions/wp/post-meta.php:36
+msgid "One Comment"
+msgstr ""
+
+#: functions/wp/post-meta.php:36
+msgid "% Comments"
+msgstr ""
+
+#: functions/wp/post-navigation-archive.php:31
+msgid "&laquo; Older posts"
+msgstr ""
+
+#: functions/wp/post-navigation-archive.php:35
+msgid "Newer posts &raquo;"
+msgstr ""
+
+#: header-default.php:355 offcanvas-left.php:50
+msgid "Logout"
+msgstr ""
+
+#: inc/addons/woocommerce-header-category-image.php:27
+#: inc/addons/woocommerce-header-category-image.php:123
+#: inc/addons/woocommerce-header-category-image.php:235
+#: inc/customiser/customiser-backend.php:23
+msgid "Header"
+msgstr ""
+
+#: inc/addons/woocommerce-header-category-image.php:31
+#: inc/addons/woocommerce-header-category-image.php:128
+msgid "Upload/Add image"
+msgstr ""
+
+#: inc/addons/woocommerce-header-category-image.php:32
+#: inc/addons/woocommerce-header-category-image.php:129
+msgid "Remove image"
+msgstr ""
+
+#: inc/addons/woocommerce-header-category-image.php:56
+#: inc/addons/woocommerce-header-category-image.php:155
+msgid "Choose an image"
+msgstr ""
+
+#: inc/addons/woocommerce-header-category-image.php:58
+#: inc/addons/woocommerce-header-category-image.php:157
+msgid "Use image"
+msgstr ""
+
+#: inc/addons/woocommerce-header-category-image.php:234
+msgid "Image"
+msgstr ""
+
+#: inc/admin/admin.php:32 inc/admin/admin.php:33
+msgid "Get Bowtied"
+msgstr ""
+
+#: inc/admin/welcome_theme.php:64
+msgid ""
+"Installation & Setup <span class='dashicons dashicons-minus'></span> Video "
+"Guide"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:271
+msgid "Header Size"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:306
+msgid "Header Font Size"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:341
+msgid "Mobile Menu Breakpoint"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:357
+msgid "Logo"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:372
+msgid "Alternative Logo"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:373
+msgid "Used on mobile devices."
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:388
+msgid "Logo Height"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:406
+msgid "Requires YITH WooCommerce Wishlist Plugin"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:420
+msgid "Wishlist Icon"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:450
+msgid "Search Icon"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:480
+msgid "Cart Icon"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:510
+msgid "User Account Icon"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:533
+msgid "Global Option"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:534
+msgid ""
+"This option here will be inherited by all pages that do not have a different "
+"setting applied individually for the header."
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:545
+msgid "for the Transparent Header"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:546
+msgid ""
+"The transparent header comes with two different color schemes: Light and "
+"Dark. For both you can choose to have a different color for the header "
+"content (navigation, icons, etc) and even a different logo. The option here "
+"sets the one you want to use as the default. The other can be set as an "
+"exception to be used by some pages only."
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:567
+msgid ""
+"If the page you are working on has a dark background, using a dark color for "
+"the menu items would make it unreadable and that is where the Light color "
+"scheme comes in. (E.g.: White text on a Black background.)"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:576
+msgid "Light Scheme: Alternative Logo"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:592
+msgid ""
+"If the page you are working on has a light backgeround, using a light color "
+"for the menu items as well would make it unreadable and that is where the "
+"Dark color scheme comes in. (E.g.: Black text on a White background.)"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:601
+msgid "Dark Scheme: Alternative Logo"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:612
+msgid "Base Font Size"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:727
+msgid "Used for titles and Headings."
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:775
+msgid "Used for body / paragraph text."
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:822
+msgid "Include Subsets"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:838
+msgid "Font Subsets"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:933
+msgid ""
+"When turned on, the Catalog Mode disables the eCommerce functionality of "
+"WooCommerce by hiding the cart and add to cart buttons allowing you to use "
+"it for cataloging purposes only."
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:982
+msgid "Number of Products per Page"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:1002
+msgid "Number of Columns"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:1022
+msgid "Spacing between products"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:1184
+msgid "Category Header Height"
+msgstr ""
+
+#: inc/customiser/customiser-backend.php:1185
+msgid "Spacing above and below the category description."
+msgstr ""
+
+#: inc/widgets/widgets-areas.php:11
+msgid "Blog Sidebar"
+msgstr ""
+
+#: inc/widgets/widgets-areas.php:21
+msgid "Shop Sidebar"
+msgstr ""
+
+#: inc/widgets/widgets-areas.php:31
+msgid "Search Widget Area"
+msgstr ""
+
+#: index-default.php:75 index-layout-1.php:68 index-layout-2.php:67
+msgid "ALL"
+msgstr ""
+
+#: index-layout-1.php:115 index-layout-2.php:112
+msgid "Read more"
+msgstr ""
+
+#: offcanvas-left.php:8 offcanvas-right.php:2
+msgid "Close Cart"
+msgstr ""
+
+#: offcanvas-left.php:29
+msgid "Wishlist"
+msgstr ""
+
+#: offcanvas-left.php:44
+msgid "My account"
+msgstr ""
+
+#: search.php:10
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""

@@ -1,0 +1,51 @@
+ul.post-categories
+{
+	list-style: none; 
+	margin: 0 auto;
+	text-align: center;
+	margin: 100px 0 10px 0;
+
+	@media #{$medium-up}  
+	{
+		margin: 90px 0 25px 0;
+	}
+
+	li 
+	{
+		display: inline;
+		font-size: rem-calc(12);
+		line-height: rem-calc(12);
+		text-transform: uppercase;
+		font-weight: bold;
+		height: 12px;
+		padding: 0 10px;
+
+		@media #{$medium-up}  
+		{
+			font-size: 13px;
+			line-height: rem-calc(14);
+			padding-left: 0;
+			padding:0 7px;
+			height: 14px;
+		}
+
+		a 
+		{
+			line-height: rem-calc(12);
+			font-size: rem-calc(12);
+			display: inline-block;
+			
+			&:hover
+			{
+				color: #000; 
+			}
+
+			@media #{$medium-up}  
+			{
+				line-height: rem-calc(14);
+				font-size: 13px;
+			}
+		}
+	}
+
+}

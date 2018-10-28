@@ -1,0 +1,166 @@
+//=======================================================================
+// Foundation Functions
+//=======================================================================
+@import "vendor/foundation/foundation/functions";
+
+//=======================================================================
+// Global
+//=======================================================================
+$include-html-classes: true;
+$include-xl-html-grid-classes: true;
+$include-html-global-classes: $include-html-classes;
+$include-print-styles: false;
+
+$rem-base: 18px;
+$base-font-size: 100%;
+$base-line-height: 150%;
+$body-font-family: inherit;
+
+//=======================================================================
+// Media Queries
+//=======================================================================
+$small-range:	(0em,	39.9375em);		/* 0, 639px */
+$medium-range:	(40em,	63.9375em);		/* 640px, 1023px */
+$large-range:	(64em,	79.9375em); 	/* 1024px, 1279px */
+$xlarge-range:	(80em,	99.9375em);		/* 1280px, 1599px */
+$xxlarge-range:	(100em,	99999999em);	/* 1600px */
+
+//=======================================================================
+// Grid Variables
+//=======================================================================
+$include-html-grid-classes: $include-html-classes;
+$row-width: 1000px;
+$column-gutter: 30px;
+$total-columns: 12;
+
+//=======================================================================
+// Block Grid Variables
+//=======================================================================
+$include-html-block-grid-classes: $include-html-classes;
+$block-grid-default-spacing: 0px;
+$align-block-grid-to-grid: false;
+
+//=======================================================================
+// Colors
+//=======================================================================
+$body-bg						: #fff;
+
+$primary-color					: #000;
+$secondary-color				: #333;
+
+$secondary-color-dark			: #333;
+$secondary-color-medium			: #666;
+$secondary-color-light			: #888;
+$secondary-color-ultra-light	: #ddd;
+
+$alert-color					: #fd8a8a;
+$success-color					: #93ca78; 
+$warning-color					: #f08a24;
+$info-color						: #a0d3e8;
+
+$anchor-font-color: $primary-color;
+$anchor-font-color-hover: inherit;
+
+//=======================================================================
+// Buttons
+//=======================================================================
+$include-html-button-classes: $include-html-classes;
+
+$button-tny: rem-calc(7);
+$button-sml: rem-calc(9);
+$button-med: rem-calc(20);
+$button-lrg: rem-calc(26);
+
+$button-font-tny: rem-calc(9);
+$button-font-sml: rem-calc(12);
+$button-font-med: rem-calc(14);
+$button-font-lrg: rem-calc(18);
+$button-font-weight: bold;
+$button-font-color: $body-bg;
+
+$button-margin-bottom: 0;
+
+$button-border-width: 1px;
+
+$button-disabled-cursor: not-allowed;
+
+$button-bg-color: #ff0000;
+$button-bg-hover: lighten($primary-color, 30%);
+
+//=======================================================================
+// Site Header
+//=======================================================================
+$site-header-color: #fff;
+$site-header-color-hover: lighten($site-header-color, 30%);
+$site-header-bg-color: #000;
+
+//=======================================================================
+// Type
+//=======================================================================
+$include-html-type-classes: $include-html-classes;
+
+$header-font-family: inherit;
+$header-font-weight: bold;
+$header-font-style: normal;
+$header-font-color: $primary-color;
+$header-line-height: 1.33;
+$header-top-margin: 0rem;
+$header-bottom-margin: 0.5rem;
+
+$h1-font-size: rem-calc(64);
+$h2-font-size: rem-calc(36);
+$h3-font-size: rem-calc(22);
+$h4-font-size: rem-calc(18);
+$h5-font-size: rem-calc(16);
+$h6-font-size: rem-calc(11);
+
+$paragraph-margin-bottom: rem-calc(20);
+
+//=======================================================================
+// Forms
+//=======================================================================
+$include-html-form-classes: $include-html-classes;
+
+$form-spacing: rem-calc(20);
+$form-label-font-size: rem-calc(12);
+$form-label-font-weight: bold;
+$form-label-font-color: $secondary-color-medium;
+$form-label-line-height: 2;
+
+$input-font-color: #000;
+$input-bg-color: rgba(0, 0, 0, 0.05);
+$input-focus-bg-color: rgba(0, 0, 0, 0.1);
+$input-border-width: 0;
+$input-font-size: rem-calc(12);
+$input-box-shadow: none;
+$input-include-glowing-effect: false;
+
+$select-bg-color: $input-bg-color;
+$select-hover-bg-color: $input-focus-bg-color;
+
+//=======================================================================
+// GetBowtied
+//=======================================================================
+
+$header-height: 75px; // overwritten in Theme Options
+$header-mobiles-height: 55px;
+$wpadminbar_large_height: 32px;
+$wpadminbar_mobile_height: 46px;
+$wpadminbar_breakpoint: 782px;
+
+$offcanvas_mobile_width: 320px;
+$offcanvas_largeup_width: 400px;
+$offcanvas_quickview_largeup_width: 620px;
+$offcanvas_mobile_top_offset: 100px;
+$offcanvas_top_offset: 0;
+$offcanvas_speed: .5s;
+$offcanvas_easing: cubic-bezier(1,0,.5,1);
+
+$sidebar_mobile_width: 325px;
+$sidebar_large_width: 325px;
+$sidebar_bg_color: #f7f7f7;
+
+$extra_page_icon_font_size: rem-calc(450);
+$extra_page_icon_line_height: rem-calc(300);
+
+$boxed-width: 1000px;

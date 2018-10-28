@@ -1,0 +1,279 @@
+@import "../mixins";
+
+.widget-area 
+{
+
+    .widget.woocommerce
+    {
+
+    	//==============================================================================
+		// widget_product_categories
+		//==============================================================================
+
+    	&.widget_product_categories
+    	{
+    		@include widget_ul_li_a("\f1db", "\f111", "\f058", "\f058");
+    	}
+
+    	//==============================================================================
+		// widget_layered_nav
+		//==============================================================================
+
+    	&.widget_layered_nav
+		{
+			@include widget_ul_li_a("\f1db", "\f058", "\f058", "\f057");
+			@include widget_dropdown();
+		}
+
+		//==============================================================================
+		// widget_layered_nav_filters
+		//==============================================================================
+
+		&.widget_layered_nav_filters
+		{
+			@include widget_ul_li_a("\f1db", "\f057", "\f058", "\f057");
+		}		
+
+		//==============================================================================
+		// widget_product_search
+		//==============================================================================
+
+		&.widget_product_search
+		{
+			@include widget_search();
+		}
+
+		//==============================================================================
+		// widget_products
+		//==============================================================================
+
+		&.widget_products
+    	{
+    		@include widget_products();
+    	}
+
+    	//==============================================================================
+		// widget_recent_reviews
+		//==============================================================================
+
+    	&.widget_recent_reviews
+    	{
+    		@include widget_products();
+    	}
+
+    	//==============================================================================
+		// widget_recently_viewed_products
+		//==============================================================================
+
+		&.widget_recently_viewed_products
+    	{
+    		@include widget_products();
+    	}
+
+    	//==============================================================================
+		// widget_top_rated_products
+		//==============================================================================
+
+    	&.widget_top_rated_products
+    	{
+    		@include widget_products();
+    		.amount {
+    			display: block;
+    		}
+    	}
+
+    	//==============================================================================
+		// widget_product_tag_cloud
+		//==============================================================================
+
+    	&.widget_product_tag_cloud
+		{
+			@include widget_tags();
+		}
+
+		//==============================================================================
+		// widget_price_filter
+		//==============================================================================
+
+		&.widget_price_filter 
+		{
+			.price_slider {
+				margin-bottom: 30px;
+			}
+
+			.price_slider_amount {
+				text-align: left;
+
+				.price_label {
+					font-size: rem-calc(12);
+					line-height: rem-calc(12);
+					font-weight: bold;
+					color: $secondary-color-light;
+					padding-top: rem-calc(1);
+					span { display: inline-block; line-height: rem-calc(12); }
+				}
+
+				.button {
+					float: right;
+					background: transparent;
+					padding: 0;
+					margin: 0;
+					font-size: rem-calc(12);
+					line-height: rem-calc(12);
+				}
+			}
+
+			.ui-slider {
+				position: relative;
+				text-align: left;
+				margin-left: 8px;
+				margin-right: 8px;
+			}
+
+			.ui-slider .ui-slider-handle {
+				position: absolute;
+				z-index: 2;
+				width: 16px;
+				height: 16px;
+				background-color: #fff;
+				border-radius: 50px;
+				cursor: ew-resize;
+				outline: none;
+				top: -6px;
+				margin-left: -8px;
+			}
+
+			.ui-slider .ui-slider-range {
+				position: absolute;
+				z-index: 1;
+				display: block;
+				border: 0;
+				border-radius: 1em;
+			}
+
+			.price_slider_wrapper .ui-widget-content {
+				background-color: $secondary-color-light;
+				border: 0;
+				position: relative;
+				&:before {
+					content: "";
+					display: block;
+					position: absolute;
+					top: 0;
+					left: -8px;
+					width: 8px;
+					height: 4px;
+					border-top-left-radius: 10px;
+					border-bottom-left-radius: 10px;
+					background: $secondary-color-light;
+				}
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					top: 0;
+					right: -8px;
+					width: 8px;
+					height: 4px;
+					border-top-right-radius: 10px;
+					border-bottom-right-radius: 10px;
+					background: $secondary-color-light;
+				}
+			}
+
+			.ui-slider-horizontal {
+				height: 4px;
+			}
+
+			.ui-slider-horizontal .ui-slider-range {
+				top: 0;
+				height: 100%;
+			}
+
+		}
+
+		//==============================================================================
+		// widget_shopping_cart
+		//==============================================================================
+
+    	&.widget_shopping_cart
+    	{
+
+    		@include widget_products();
+
+    		li 
+    		{
+    			padding-right: rem-calc(20);
+
+    			&.empty {
+    				padding: 0;
+    				font-size: rem-calc(14);
+    				min-height: auto;
+    			}
+
+    			a.remove
+	    		{
+		    		position: absolute;
+		    		display: block;
+		    		width: 10px;
+		    		height: 10px;
+		    		right: 0;
+		    		top: -.15em;
+		    		padding: 0;	
+		    		font-size: rem-calc(14);	    		
+	    		}
+
+	    		.quantity 
+	    		{
+	    			display: block;
+	    		}
+
+    		}
+
+    		p
+    		{
+    			&.total
+    			{
+	    			padding: rem-calc(30) 0;
+	    			line-height: 1em;
+	    			display: block;
+	    			margin: 0;
+
+	    			strong
+	    			{
+	    				color: $secondary-color;
+	    				text-transform: uppercase;
+	    				font-weight: normal;
+	    				font-size: rem-calc(14);
+	    				line-height: 1em;
+	    				font-weight: bold;
+	    			}
+
+	    			span 
+	    			{
+	    				float: right;
+	    				font-weight: bold;
+	    				font-size: rem-calc(22);
+	    				line-height: 1em;
+	    				color: $primary-color;
+	    			}
+    			}
+
+    			&.buttons
+    			{
+    				a 
+    				{
+    					width: 100%;
+    					margin-top: rem-calc(10);
+
+    					&:not(.checkout)
+    					{
+    						background: #777;
+    						//color: #000;
+    					}
+    				}
+    			}
+    		}
+    	}
+    }
+}

@@ -1,0 +1,47 @@
+body
+{ 
+	&.blog,
+	&.archive
+	{
+		&:not(.woocommerce) 
+		{
+			.blog_layout_default
+			{
+				@import "blog/layouts/default/main";
+				@import "blog/layouts/default/page_title";
+			    @import "blog/layouts/default/title";
+			    @import "blog/layouts/default/meta";
+			    @import "blog/layouts/default/load_more";
+			    @import "blog/layouts/default/post_navigation";
+			    @import "blog/layouts/default/sticky_post";
+			}
+
+			.blog_layout_1
+			{
+				@import "blog/layouts/layout_1/main";
+				@import "blog/layouts/layout_1/sticky_post";
+				@import "blog/layouts/layout_1/bg_image";
+				@import "blog/layouts/layout_1/post_categories";
+				@import "blog/layouts/layout_1/title";
+				@import "blog/layouts/layout_1/excerpt";
+				@import "blog/layouts/layout_1/read_more";
+				@import "blog/layouts/layout_1/load_more";
+				@import "blog/layouts/layout_1/post_navigation";
+			}
+
+			.blog_layout_2
+			{
+				@import "blog/layouts/layout_2/main";
+				@import "blog/layouts/layout_2/sticky_post";
+				@import "blog/layouts/layout_2/bg_image";
+				@import "blog/layouts/layout_2/post_categories";
+				@import "blog/layouts/layout_2/title";
+				@import "blog/layouts/layout_2/excerpt";
+				@import "blog/layouts/layout_2/read_more";
+				@import "blog/layouts/layout_1/post_navigation";
+				@import "blog/layouts/layout_2/load_more";
+				@import "blog/layouts/layout_2/post_navigation";
+			}	
+		}
+	}
+}

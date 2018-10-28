@@ -1,0 +1,99 @@
+.woocommerce {
+
+	.product_infos {
+    
+        .single_product_share
+        { 
+            display: table;
+            width: 100%; 
+            vertical-align: top;
+            text-align: left;
+
+
+            @media #{$large-up} {
+
+                float: right;
+                display: inline-block; 
+                text-align: inherit; 
+            }
+            
+            &:after
+            {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            
+
+    		.share-product-text {
+                display: table-cell;
+                vertical-align: middle;
+    			text-transform: uppercase;
+	    		font-size: rem-calc(10);
+	    		font-weight: bold;
+               
+                @media (min-width: 1023px) {
+                    display: none;
+                }
+
+                @media #{$xlarge-up}
+                {
+                    text-align: right;
+                    display: inline-block;
+                    padding-right: rem-calc(10); 
+                }
+
+
+
+    		}
+
+    		.social_links
+            {
+                display: table-cell;
+                text-align: right;
+                // vertical-align: top;
+                
+                @media #{$large-up}
+                {
+                    display: inline-block;
+                }
+                
+                a
+                {
+                    padding: 0 12px;
+                    
+                    &:last-child
+                    {
+                        padding-right: 0;
+                    }
+
+                    @media #{$large-up}
+                    {
+                        padding: 0 5px;
+
+                        &:last-child { padding-right: 0; }
+
+                        &.social_media_facebook:hover
+                        {
+                            color: #3b5998;
+                        }
+
+                        &.social_media_twitter:hover
+                        {
+                            color: #4099FF;
+                        }
+
+                        &.social_media_pinterest:hover
+                        {
+                            color: #C92228;
+                        }
+                    }
+
+                }
+            }
+
+    	}
+    
+    }
+
+}
